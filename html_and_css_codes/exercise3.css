@@ -1,0 +1,88 @@
+body{
+    font-family: sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.nav li{
+    text-transform: uppercase;
+    display: inline-block;
+    /* border: 2px solid black; */
+    border-bottom: 2px solid red;
+    margin: auto 10px;
+    padding-bottom: 5px;
+    word-spacing: 20px;
+}
+
+
+h2{
+    border-bottom: 2px solid red;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+a{
+    /*text-decoration: none; /* by default it is underline */
+    color: #444;
+    font-style: italic;
+    font-size: 25px;
+    word-spacing: 5px;
+    letter-spacing: 2.5px;
+    text-decoration: dotted dashed black;
+}
+
+.ulclass{
+    background: pink;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.nav{
+    margin-bottom: 40px;
+}
+
+
+
+/* pseudo classes */
+/* ex. link, visited, hover, :active */
+/* order need to maintained */
+/* you can add this to any element(tag) but mostly used in links */
+/* .nav li a:link{
+    color: red;
+} */
+
+a:link{
+    color: rgb(119, 172, 119);
+}
+a:visited{
+    background-color: #100101;
+    color: rgb(1, 17, 3);
+}
+a:hover{
+    background-color: rgb(102, 72, 225);
+    color: rgb(234, 245, 28);
+}
+a:active{
+    /* this state is when link is pressed. for total time of link pressed this is active */
+    background-color: pink;
+    color: yellow;
+}
+
+input:focus{
+    /* this is used whenever we click on any input to fill it */
+    padding: 5px;
+}
+
+/* while writing input pseudo classes write like 'input:required', space in not allowed */
+
+input:required{
+    background-color: rgb(235, 131, 131);
+}
+
+
+
+
+
+

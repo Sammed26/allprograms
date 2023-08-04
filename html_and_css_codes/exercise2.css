@@ -1,0 +1,45 @@
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    background: pink;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.firstdiv{
+    border: 3px solid green;
+}
+
+.para1class{
+    margin-left: 10px;
+}
+
+.h3firstclass{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.para2class{
+    margin-left: 10px;
+}
+
+.h3secondclass{
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.seconddiv{
+    border: 3px solid green;
+}
+
+.firstdiv{
+    margin-bottom: 50px ;
+}
+
+body{
+    margin-left: 200px;
+    margin-right: 200px;
+}

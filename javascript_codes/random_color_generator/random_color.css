@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    font-family: sans-serif;
+
+}
+section{
+    text-align: center;
+    padding: 2rem 2rem;
+}
+h1{
+    font-size: 2rem;
+    padding: 1rem;
+    background: white;
+    width: 70%;
+    text-align: center;
+    margin: 0.5rem auto;
+}
+button{
+    font-size: 1.3rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 40%;
+    background: white;
+    transition: background 0.2s ease-in-out;
+}
+button:hover{
+    background: #ffe5e5;
+}
+
+.main-output{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    height: 2rem;
+    width: 40%;
+    background: white;
+    text-align: center;
+}

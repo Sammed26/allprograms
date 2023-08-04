@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* ========================== utility classes ============================ */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.btn{
+    padding: 10px 30px;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+
+
+
+
+s
+
+/* =================================== header styling ========================== */
+
+.header-div{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    opacity: 0.85;
+}
+
+.header h1{
+    float: left;
+    width: 50%;
+    font-size: 3.2rem;
+    padding: 10px;
+}
+.header a{
+    display: inline-block;
+    padding: 1rem;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+.header .header-links{
+    float: right;
+    text-align: right;
+    padding-top: 10px;
+}
+.header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/* =========================== sub header section styling ======================== */
+
+.sub-header-section img{
+    width: 100vw;
+    height: 60vh;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.437);
+    border-radius: 20px;
+}
+.sub-header-section{
+    position: relative;
+}
+.sub-header-section .sub-header-overlay{
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    height: 40rem;
+    color: white;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+.sub-header-section .sub-header-overlay a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.sub-header-section:hover .sub-header-overlay{
+    top: 80%;
+    left: 50%;
+    z-index: 1;
+}
+.sub-header-section::after{
+    content: "hello";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.402);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+.sub-header-section:hover::after{
+    opacity: 1;
+}
+.sub-header-section:hover .sub-header-overlay{
+    z-index: 3;
+}
+.sub-header-section:hover .sub-header-overlay{
+    box-sizing: 10px 10px 10px rgba(0, 0, 0, 0.418);
+}
+.sub-header-section .sub-header-overlay h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+.sub-header-section .sub-header-overlay p{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+/* ========================== about section styling ===================== */
+
+.about-section{
+    width: 100%;
+    height: 500px;
+    padding-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.about-section .about-image-section img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.about-section .about-image-section{
+    flex-basis: 50%;
+    text-align: center;
+    width: 50%;
+    padding-left: 20px;
+    transform: translateX(150%);
+    animation: about-image-animation 1s ease-out forwards;
+}
+@keyframes about-image-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-section .about-text-section{
+    flex-basis: 40%;
+    text-align: left;
+    padding-right: 20px;
+    transform: translateX(-150%);
+    animation: about-text-animation 1s ease-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-section .about-text-section .about-text-first-para{
+    font-size: 1.8rem;
+
+}
+.about-section .about-text-section h2{
+    font-size: 3.2rem;
+    padding-bottom: 30px;
+}
+.about-section .about-text-section .about-text-second-para{
+    font-size: 1.8rem;
+}
+
+
+
+
+/* ====================== category section styling =================== */
+
+.category-section{
+    margin-bottom: 100px;
+}
+.category-section .category-items{
+    display: flex;
+    justify-content: space-around;
+    flex: 1 1 500px;
+}
+.category-section .category-heading{
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+}
+.category-section .category-items .item1{
+    align-self: flex-start;
+    margin-right: 5px;
+}
+.category-section .category-items .item2{
+    align-self: center;
+}   
+.category-section .category-items .item3{
+    align-self: flex-end;
+    margin-left: 5px;
+}
+.category-section .category-items .item img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.category-section .category-items .item{
+    position: relative;
+
+}
+.category-section .category-items .item::after{
+    content: "hello";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.476);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    z-index: 0;
+}
+.category-section .category-items .item:hover::after{
+    opacity: 1;
+    z-index: 1;
+}
+.category-section .category-items .item_overlay h1{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.category-section .category-items .item_overlay{
+    position: absolute;
+
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    top: 0%;
+    font-size: 2.2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.category-section .category-items .item:hover .item_overlay{
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+

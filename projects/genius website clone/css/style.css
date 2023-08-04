@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+
+
+/* =============================== utility classes ======================= */
+.text-bold{
+    font-weight: 700;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.text-light{
+    color: white;
+}
+.primary-btn{
+    border: 2px solid black;
+    padding: 8px;
+    color: black;
+    text-align: center;
+    display: block;
+    margin: 0 45% 50px 45%;
+}
+.primary-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+/* =========================== pre-header styling ========================== */
+.pre-header{
+    background-color: rgb(241, 249, 9);
+}
+
+.pre-header-list-item-search-bar div,
+.pre-header-list li{
+    display: inline-block;
+}
+.pre-header ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.pre-header .pre-header-list img{
+    object-fit: cover;
+    height: auto;
+
+}
+.pre-header-list li{
+    /* border: 2px solid black; */
+    float: left;
+    width: 33.33%;
+}
+.pre-header-list li:first-of-type{
+    text-align: left;
+}
+.pre-header-list li:last-of-type{
+    text-align: right;
+}
+.pre-header-list li:nth-child(2n){
+    text-align: center;
+}
+.pre-header-list-item-search-bar-input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    color: black;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.pre-header-list-item-search-bar-icon{
+    display: inline-block;
+}
+
+.pre-header .pre-header-list .signup-in-link{
+    padding-right: 10px;
+    padding-top: 15px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.pre-header .pre-header-list .signup-in-link a:first-of-type{
+    padding-right: 15px;
+}
+
+
+
+/* ============================== main-header styling ======================== */
+.main-header{
+    background-color: black;
+    height: 40px;
+}
+.main-header .main-header-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 9px;
+}
+.main-header .main-header-list .main-header-list-items-text-links a{
+    color: white;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border-right: 1px solid white;
+    padding-right: 50px;
+    font-weight: 500;
+}
+
+
+
+
+/* ======================== main news styling ========================= */
+.home-main-news-section{
+    padding-top: 100px;
+}
+.home-main-news-section .home-main-news-section-text-box{
+    float: left;
+    width: 40%;
+    padding-right: 10px;
+    margin: 0;
+}
+.home-main-news-section .home-main-news-section-image-box{
+    float: left;
+    width: 60%;
+    text-align: right;
+}
+.home-main-news-section .home-main-news-section-image-box img{
+    height: 360px;
+    object-fit: cover;
+}
+.home-main-news-section .home-main-news-section-text-box .home-main-news-section-heading{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid red;
+    padding-bottom: 2px;
+}
+.home-main-news-section .home-main-news-section-text-box .home-main-news-section-para1{
+    font-weight: 500;
+    font-size: 3rem;
+    color: black;
+    padding-top: 12px;
+    line-height: 5rem;
+}
+.home-main-news-section .home-main-news-section-text-box .home-main-news-section-para2{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.home-main-news-section::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/* ======================================= sub news styling ========================== */
+.sub-news .news{
+    height: auto;
+    float: left;
+    width: 25%;
+    margin-top: 50px;
+    padding: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 50px;
+}
+.sub-news .news a{
+    color: black;
+}
+.sub-news .news a:hover .text-box p:nth-child(2){
+    text-decoration: underline;
+}
+.sub-news .news .image-box{
+    width: 100%;
+}
+
+.news .text-box{
+    line-height: 28px;
+}
+.sub-news .news1{
+    border-right: 3px solid black;
+}
+.sub-news .news2{
+    border-right: 3px solid black;
+}
+.sub-news .news3{
+    border-right: 3px solid black;
+}
+
+.sub-news .news p:nth-child(2n){
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.sub-news .news p:last-of-type{
+    padding-top: 100px;
+    font-size: 1.1rem;
+}
+.sub-news .news p:last-of-type span{
+    font-weight: 500;
+}
+.sub-news .news p:first-of-type{
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.sub-news::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+/* ============================= charts styling ==================== */
+.charts h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+.charts .charts-items-list .charts-item a img,
+.charts .charts-items-list .charts-item a p{
+    float: left;
+}
+.charts .charts-items-list .charts-item a img,
+.charts .charts-items-list .charts-item a p:last-of-type{
+    width: 15%;
+}
+.charts .charts-items-list .charts-item a img{
+    width: 150px;
+    padding-left: 40px;
+}
+.charts-items-list .charts-item a p{
+    width: 35%;
+    padding-left: 30px;
+}
+.charts-item::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.charts-items-list .charts-item{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+}
+.charts .charts-items-list .charts-item a p:last-of-type{
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: black;
+}
+.charts .charts-items-list{
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.charts .charts-btn{
+    font-size: 1.6rem;
+}
+.charts{
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/* =========================== latest news styling ================ */
+.latest-section-all-news{
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.latest-section-all-news .latest-news{
+    width: 250px;
+    height: 350px;
+    margin-top: 20px;
+}
+.latest-section-all-news .latest-news img{
+    width: 280px;
+    padding: 5px 0;
+}
+.latest-section-all-news .latest-news p:first-of-type{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 400;
+    display: inline-block;
+}
+.latest-section .latest-heading h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 0px;
+}
+.latest-section .latest-heading{
+    text-align: center;
+}
+.latest-section .latest-heading p:first-of-type{
+    font-size: 1.5rem;
+    color: red;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.latest-section .latest-section-all-news .latest-news .para2{
+    font-size: 2.2rem;
+    line-height: 22px;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+}
+.latest-section .latest-section-btn{
+    font-size: 1.6rem;
+    padding-top: 10px;
+}
+.latest-news a:hover .para2{
+    text-decoration: underline;
+}
+
+
+
+/* ========================== community section styling ================= */
+.community-heading-btn{
+    font-size: 1.5rem;
+    max-width: 600px;
+    width: 20%;
+    border: 2px solid black;
+    padding: 8px;
+    color: black;
+    text-align: center;
+}
+.community .community-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    text-transform: uppercase;
+}
+.community .community-buttons a:hover{
+    background-color: black;
+    color: white;
+}
+.community .btn1{
+    margin-right: 20px;
+}
+.community .btn2{
+    margin-left: 20px;
+}
+.community .community-heading h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+}
+.community .community-heading p{
+    font-size: 1.6rem;
+    text-align: center;
+    padding-bottom: 40px;
+    width: 60%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: red;
+}
+.community .community-heading{
+    margin-bottom: 50px;
+}
+
+ /* ------------ .community table styling ----------- */
+.community .community-table .table img{
+    width: 80px;
+    border-radius: 40%;
+}
+.community .community-table table{
+    width: 100%;
+    text-align: center;
+}
+.community .community-table table th:nth-child(2n),
+.community .community-table table td:nth-child(2n){
+    text-align: left;
+}
+.community .community-table table th:last-of-type,
+.community .community-table table td:last-of-type{
+    text-align: right;
+}
+.community .community-table table td:last-of-type{
+    font-size: 1.2rem;
+}
+.community .community-table table th{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;
+}
+.community .community-table table td{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid red;
+}
+.community .community-btn{
+    font-size: 1.6rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* ============================= footer section styling =============== */
+.footer .footer-vertical-list1,
+.footer .footer-vertical-list2{
+    display: inline-block;
+}
+.footer-container{
+    background: black;
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+.footer{
+    height: 85vh;
+    background: black;
+}
+.footer .footer-first-section{
+    display: flex;
+    padding-top: 75px;
+    border-bottom: 1px solid rgb(117, 9, 9);
+    padding-bottom: 70px;
+}
+.footer .para-and-social-link-section{
+    width: 50%;
+    color: white;
+    padding-right: 30px;
+    height: 75%;
+}
+.footer .footer-vertical-list1,
+.footer .footer-vertical-list2{
+    width: 25%;
+    color: white;
+    height: 100%;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer .footer-first-section .para-and-social-link-section .footer-para{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.footer .footer-first-section .para-and-social-link-section .footer-social-links{
+    padding-top: 30px;
+}
+.footer .footer-first-section .para-and-social-link-section .footer-social-links i{
+    padding-right: 20px;
+}
+.footer .footer-vertical-list1 .footer-list1 .footer-list1-items,
+.footer .footer-vertical-list2 .footer-list2 .footer-list2-items{
+    padding: 0 0 18px 30px;
+    font-size: 1.4rem;
+}
+.footer .footer-vertical-list2 .footer-list2{
+    padding-left: 10px;
+}
+.footer .footer-vertical-list1 p{
+    padding-left: 30px;
+    font-weight: 300;
+}
+.footer .footer-vertical-list2 .footer-vertical-list2-anchor{
+    padding-left: 40px;
+    font-weight: 300;
+    padding-top: 50px;
+}
+
+
+

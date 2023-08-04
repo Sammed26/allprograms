@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+
+.grandparent{
+    margin: 3rem auto;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    background: yellow;
+    height: 90vh;
+}
+.box{
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.parent{
+    background: pink;
+}
+.child{
+    background: orange;
+}

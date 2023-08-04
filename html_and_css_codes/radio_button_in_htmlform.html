@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        radio button in html form
+    </title>
+</head>
+
+<body>
+    <form action="addlinks.html" method="get">
+    <label for="name">Name</label>
+    <input type="text" id="name" required placeholder="your good name please">
+    <br><br>
+    
+    <label for="college">College Name</label>
+    <input type="text" id="college" placeholder="college name" required>
+    <br><br>
+    
+    <label for="rollno">Roll No.</label>
+    <input type="number" id="rollno" placeholder="roll number please" required>
+    <br><br>
+    
+    <label for="mobile no.">Mobile Number</label>
+    <input type="number" id="mobile no." required placeholder="enter mobile number">
+    <br><br>
+
+    <p>selct you gender</p>
+    <label for="Male">Male</label>
+    <input type="radio" name="gender" id="Male">
+
+    <label for="Female">Female</label>
+    <input type="radio" name="gender" id="Female">
+
+    <label for="Others">Others</label>
+    <input type="radio" name="gender" id="Others">
+
+    <br><br>
+
+
+    <label for="weight category">select your weight category</label>
+    <select name="weight category" id="">
+        <option value="select">select</option>
+        <option value="10-20">10 to 20</option>
+        <option value="20-30">20 to 30</option>
+        <option value="30-40">30 to 40</option>
+        <option value="40+">above 40</option>
+    </select>
+
+    <br><br>
+
+    <input type="submit">
+
+    <!-- If we can't give name attribute same to all then you can select as many as you want, if all name's value is same then you can select one at a time -->
+
+    </form>
+</body>

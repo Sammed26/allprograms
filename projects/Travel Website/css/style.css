@@ -1,0 +1,1018 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.2em;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.header {
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('../img/header_image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* --- utility classes --- */
+
+.text-red{
+    color: #f43968;
+}
+.text-black{
+    color: #333;
+}
+.text-light{
+    color: whitesmoke;
+}
+
+.background-dark{
+    background-color: #110909;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.lg-heading{
+    font-size: 3.2rem;
+}
+.medium-text{
+    font-size: 1.6rem;
+}
+.extra-lg-text{
+    font-size: 4.8rem;
+}
+.button{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.7em 1.5em;
+    margin: 0.5em 0;
+    
+}
+.primary-button{
+    background: whitesmoke;
+    border-radius: 10em; /*give large values so look nice */
+}
+.primary-button:hover{
+    background: black;
+    color: white;
+}
+
+.secondary-button{
+    border-radius: 10em;
+    border: 2px solid black;
+    text-decoration: none;
+}
+.secondary-button:hover{
+    background-color: aqua;
+}
+
+.square-transferrent-button{
+    border: 4px solid white;
+}
+
+
+
+
+/* ============= header navbar styling =============== */
+
+.nav-bar .logo{
+    float: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    padding: 0.5em;
+}
+
+ul li a{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+
+.nav-bar .nav-item{
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 1em;
+}
+
+
+
+.nav-bar::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.nav-items{
+    /* display: block; */
+    float: right;
+    
+}
+
+.nav-bar a{
+    padding-bottom: 0.3em;
+}
+
+.nav-bar a:hover{
+    border-bottom: 2px solid white;
+}
+
+
+
+
+/* =========== header content styling ============ */
+
+.header-content-heading{
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.header-content-para{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.header-content{
+    /* border: 2px solid white; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+}
+
+
+
+/* ============ showcase tyling ========== */
+
+.showcase{
+    padding-top: 10rem;
+    padding-bottom: 1.6rem;
+    background: whitesmoke;
+}
+
+.row{
+    height: 350px;
+    background-color: white;
+    /* border: 4px solid black; */
+}
+
+
+
+.row1 .image-box,
+.row2 .text-box{
+    width: 50%;
+    float: left;
+}
+
+.row2 .image-box,
+.row1 .text-box{
+    width: 50%;
+    float: right;
+}
+
+.row{
+    /* box-shadow: Horizontaloffset verticaloffset blur spread color; */
+    box-shadow: 0px 0px 30px 0px #aaa;
+    margin-bottom: 15rem;
+}
+
+.row3 .image-box{
+    float: left;
+    width: 50%;
+
+}
+
+.row3 .text-box{
+    float: right;
+    width: 50%;
+}
+
+.row .image-box{
+    height: 100%;
+    /* border: 2px solid red; */
+}
+
+.row .text-box{
+    height: 100%;
+    /* border: 2px solid red; */
+}
+
+.row .text-box{
+    padding: 5rem;
+}
+
+.row .image-box img{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;    /*by using this the aspect ration of website is maintained */
+}
+
+.showcase h1{
+    margin-bottom: 1em;
+}
+
+
+.showcase-img1-para{
+    background-color: white;
+    font-size: 1.5em; 
+    line-height: 2em;   
+}
+
+.showcase-img2-para{
+    background-color: white;
+    font-size: 1.5em; 
+    line-height: 2em;   
+}
+
+.showcase-img3-para{
+    background-color: white;
+    font-size: 1.5em; 
+    line-height: 2em;   
+}
+
+.row::after{  
+    /* this is not mandatory here because we made height of parent fixed and w.r.t. that this works but when we later changes height to auto(while making website responsive) we face issues, so better to do it  */
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* ============ features section =========== */
+
+.features{
+    padding: 10rem;
+}
+
+
+.box{
+    width: 33.333%;
+    float: left;
+    padding: 32px;
+    text-align: center;
+}
+
+.main-box{
+    box-shadow: 5px 5px 20px 2px #aaa;
+}
+
+.main-box::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.box1, .box3{
+    background-color: #110909;
+}
+
+.box2{
+    background-color: #be0c0c;
+}
+
+.main-box h1{
+    padding: 1rem;
+}
+
+.main-box p{
+    font-size: 1.6rem;
+}
+
+
+
+
+
+/* ================= footer styling ============== */
+
+.footer{
+    text-align: center;
+    background-color: #110909;
+}
+
+.social-media-links{
+    margin-top: 3rem;
+    padding: 3rem;
+}
+
+.footer-para{
+    padding-bottom: 3rem;
+}
+
+.footer-icons{
+    padding: 1rem;
+}
+
+
+
+
+
+/* ================= about page styling ================ */
+
+.about{
+    padding: 5rem;
+}
+
+.about .main-heading{
+    width: 50%;
+    border-bottom: 8px solid red;
+    border-radius: 10rem;
+    padding-left: 2rem;
+     margin-bottom: 2rem;
+}
+/* alternative for drawing line using pseudo elements */
+/* .about .main-heading::after{
+    content: "";
+    display: block;
+    border: 4px solid red;
+    width: 50%;
+} */
+
+
+
+.about-features-list{
+    padding: 2rem;
+}
+.about-features-list li{
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+.about-features-list li::before{
+    content: "\2713";
+    color: red;
+    font-weight: bold;
+}
+
+.about-features-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.about-features-list1{
+    float: left;
+    padding-left: 20%;
+}
+
+.about-features-list2{
+    float: right;
+    padding-right: 20%;
+}
+
+.specifications::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.specifications{
+    text-align: center;
+    padding: 1rem 10%;
+}
+
+.first-specification{
+    float: left;
+    width: 25%;
+    align-items: center;
+}
+.second-specification{
+    float: left;
+    width: 25%;
+    align-items: center;
+}
+.third-specification{
+    float: left;
+    width: 25%;
+    align-items: center;
+}
+.fourth-specification{
+    float: left;
+    width: 25%;
+    align-items: center;
+}
+
+/* ================ in about contact banner styling ================ */
+
+.contact-banner{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f43968;
+    box-shadow: 5px 5px 15px #0000004e;
+}
+
+.contact-banner p{
+    width: 60%;
+    margin-top: 1.5rem;
+    float: left;
+}
+
+
+.contact-banner .contact-button{
+    width: 40%;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+.contact-banner::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+/* =================== contact page address styling ==================== */
+
+.contact-address img{
+    display: inline-block;
+    width: 100%;
+    object-fit: cover;    /*by using this the aspect ration of website is maintained */
+}
+.contact-address-para{
+    display: inline-block;
+    padding-left: 2rem;
+    padding-bottom: 0.5rem;
+}
+.contact-address-span p:nth-child(2n+1){
+    padding-bottom: 3rem;
+    font-size: 1.4rem;
+}
+
+.contact::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contact{
+    padding: 5rem 0;
+}
+
+
+
+.contact-address{
+    float: left;
+    width: 50%;
+    padding-right: 10%;
+}
+
+.contact-address img{
+    display: inline-block;
+}
+
+
+
+
+.contact-form .main-heading{
+    font-weight: 400;
+    border-bottom: 8px solid red;
+    margin-bottom: 2rem;
+}
+.contact-form-para{
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+}
+
+.contact-form{
+    float: right;
+    width: 50%;
+}
+
+.contact-form-part label{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.contact-form-part input{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 2px;
+}
+
+.contact-form-part textarea{
+    width: 100%;
+}
+
+.contact-form .contact-form-part .submit-button{
+    width: 30%;
+    text-transform: uppercase;
+    margin: 0 35%;
+    box-shadow: 5px 5px 7px #0000004f;
+    background-color: red;
+    padding: 1rem;
+    border: 4px solid red;
+    color: white;
+    border-radius: 10rem;
+}
+
+.contact-form .contact-form-part .submit-button:hover{
+    background-color: white;
+    color: black;
+    border: 4px solid black;
+}
+
+textarea:focus{
+    padding: 1rem;
+}
+
+input:focus{
+    padding: 2rem;
+}
+textarea:hover{
+    border: 2px solid black;
+}
+
+input:hover{
+    border: 2px solid black;
+}
+
+
+
+
+
+/* ========================= thank you page editing ================== */
+
+.thankyou-page-para1{
+    font-size: 5rem;
+    color: red;
+    padding: 5rem 5rem 0 5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.thankyou-page-para2{
+    font-size: 2rem;
+    background-color: rgb(235, 240, 240);
+    font-weight: 700;
+    text-align: center;
+    padding: 3rem;
+}
+
+.thankyou-page-para3{
+    padding-top: 10rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.thankyou-sign{
+    padding: 2rem;
+    width: 10%;
+    text-align: center;
+    margin-left: 45%;
+    margin-bottom: 2rem;
+}
+
+
+
+/* =================== media queries ==================== */
+
+@media (max-width: 500px)
+{
+    /* ====== media queries for header ======== */
+    html{
+        font-size: 7.5px;
+    }
+    .nav-bar{
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .nav-items{
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .header h1{
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    
+    /* ============ media queries for showcase section =========== */
+    /* .showcase{
+        float: none;
+        width: 100%;
+        display: block;
+        
+    }
+    .showcase .text-box{
+        font-size: 0.5em;
+        height: 0.98em;
+    }
+    .showcase .text-box h1{
+        font-size: 5em;
+    } */
+
+    
+    .row{
+        height: auto;
+        display: block;
+    }
+    .row1{
+        float: none;
+        height: 100%;
+        display: block;
+    }
+    .row1 .image-box{
+        width: 100%;
+        height: auto;
+    }
+    .row1 .text-box{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .row2{
+        float: none;
+        height: 100%;
+        display: block;
+    }
+    .row2 .image-box{
+        width: 100%;
+        height: auto;
+    }
+    .row2 .text-box{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .row3{
+        float: none;
+        height: 100%;
+        display: block;
+    }
+    .row3 .image-box{
+        width: 100%;
+        height: auto;
+    }
+    .row3 .text-box{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+
+    
+    /* ================== features section media queries ============ */
+    .features .box{
+        float: none;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .features h1{
+        font-size: 2.5rem;
+    }
+    /* ================== footer section media queries =============== */
+    .footer .container div{
+        text-align: center;
+    }
+
+
+    /* ====================== about page media queries ================= */
+     .about .main-heading{
+        border-radius: 0px;
+        width: 100%;
+    }
+    .nav-bar .logo,
+    .nav-bar .nav-item{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .about .main-heading,
+    .about p{
+        text-align: center;
+    }
+    /* .about-features-list .about-features-list1,
+    .about-features-list .about-features-list2{
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    } */
+    .about-features-list{
+        margin-top: 2em;
+    }
+    .about-features-list1,
+    .about-features-list2{
+        float: none;
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .about-features-list li{
+        padding-left: 1em;
+        font-weight: 700;
+    }
+    .specifications .first-specification,
+    .specifications .second-specification,
+    .specifications .third-specification,
+    .specifications .fourth-specification{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .specifications{
+        margin-top: 2em;
+    }
+    
+    .contact-banner p{
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .contact-banner .c-b{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 1em 0 1em 0;
+        margin: 0, auto;
+    }
+
+
+    /* ======================= contact page media queries ================= */
+    .contact-address,
+    .contact-form{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .contact .submit-button{
+        font-size: 1em;
+    }
+    .contact-form .main-heading{
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+}
+
+
+
+
+
+
+@media (min-width: 501px) and (max-width: 768px)
+{
+    /* ====== media queries for header ======== */
+    html{
+        font-size: 9px;
+    }
+    .nav-bar{
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .nav-items{
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .header h1{
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .header-content .header-content-heading{
+        margin-top: 2em;
+    }
+    
+    /* ============ media queries for showcase section =========== */
+    /* .showcase{
+        float: none;
+        width: 100%;
+        display: block;
+        
+    }
+    .showcase .text-box{
+        font-size: 0.5em;
+        height: 0.98em;
+    }
+    .showcase .text-box h1{
+        font-size: 5em;
+    } */
+
+    
+    .row{
+        height: auto;
+        display: block;
+    }
+    .row1{
+        float: none;
+        height: 100%;
+        display: block;
+    }
+    .row1 .image-box{
+        width: 100%;
+        height: auto;
+    }
+    .row1 .text-box{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .row2{
+        float: none;
+        height: 100%;
+        display: block;
+    }
+    .row2 .image-box{
+        width: 100%;
+        height: auto;
+    }
+    .row2 .text-box{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .row3{
+        float: none;
+        height: 100%;
+        display: block;
+    }
+    .row3 .image-box{
+        width: 100%;
+        height: auto;
+    }
+    .row3 .text-box{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+
+    
+    /* ================== features section media queries ============ */
+    .features .box{
+        float: none;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    /* ================== footer section media queries =============== */
+    .footer .container div{
+        text-align: center;
+    }
+
+
+    /* ====================== about page media queries ================= */
+     .about .main-heading{
+        border-radius: 0px;
+        width: 100%;
+    }
+    .nav-bar .logo,
+    .nav-bar .nav-item{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .about .main-heading,
+    .about p{
+        text-align: center;
+    }
+    /* .about-features-list .about-features-list1,
+    .about-features-list .about-features-list2{
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    } */
+    .about-features-list{
+        margin-top: 2em;
+    }
+    .about-features-list1,
+    .about-features-list2{
+        float: none;
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .about-features-list li{
+        padding-left: 1em;
+        font-weight: 700;
+    }
+    .specifications .first-specification,
+    .specifications .second-specification,
+    .specifications .third-specification,
+    .specifications .fourth-specification{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .specifications{
+        margin-top: 2em;
+    }
+    
+    .contact-banner p{
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .contact-banner .c-b{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 1em 0 1em 0;
+        margin: 0, auto;
+    }
+
+
+    /* ======================= contact page media queries ================= */
+    .contact-address,
+    .contact-form{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .contact .submit-button{
+        font-size: 1em;
+    }
+    .contact-form .main-heading{
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+}
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1200px)
+{
+    html{
+        font-size: 54.25%;
+    }
+    .contact .submit-button{
+        font-size: 1em;
+    }
+    .features .box h1{
+        font-size: 2.8em;
+    }
+    .features .box p{
+        font-size: 1em;
+    }
+}
+
+
+@media (orientation: landscape) and (max-height: 500px){
+    .header{
+        height: 90vmax;
+    }
+}
+
+@media (max-width: 300px)
+{
+    .features .box h1{
+        font-size: 2em;
+        padding-left: 2px;
+    }
+    .features .box{
+        width: 150%;
+    }
+    
+    .features .box p{
+        font-size: 1em;
+    }
+}

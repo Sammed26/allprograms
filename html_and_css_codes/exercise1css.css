@@ -1,0 +1,18 @@
+/* this all are utility classes */
+
+.headingbackground{
+    background-color: black;
+}
+.headingcolor{
+    color: white;
+}
+.parabackground{
+    background-color: red;
+}
+.background{
+    background-color: pink;
+}
+
+body{
+    font-family: sans-serif;
+}

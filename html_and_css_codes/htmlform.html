@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Form to represent placeholders and required</title>
+</head>
+
+<body>
+    <form action="index.html" method="get">       <!-- 'placeholder' attribute is used to place the text or value in input box before starting to fill input -->
+        <!-- required is used to set the mandatory fields so form can't be submitted unless all the required entries are properly given -->
+        <label for="username">USERNAME</label>
+        <input type="text" name="user" id="username" required placeholder="enter username">
+        <br><br>
+        <label for="pass">PASSWORD</label>
+        <input type="password" name="pass" id="pass" placeholder="password please" required>
+        <br><br>
+        <label for="email">EMAIL</label>
+        <input type="email" name="eml" id="email" placeholder="enter valid email" required>
+        <br><br>
+        <label for="bdate">DATE OF BIRTH</label>
+        <input type="date" name="bdate" id="bdate" placeholder="enter date of birth">
+        <br><br>
+        <!-- name attribute is used when we declare method as get then to show information we provided in form after submitting form in url -->
+        <input type="submit">
+    </form>
+</body>

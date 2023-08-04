@@ -1,0 +1,3 @@
+Thanks {name} for purchasing an {item}.
+Please visit our {outlet} outlet for any kind of problem.
+We will serve you again, soon....

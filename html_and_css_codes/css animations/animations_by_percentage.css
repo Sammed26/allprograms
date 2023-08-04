@@ -1,0 +1,98 @@
+.box{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    /* animation-name: move-around;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
+
+    /* shortcut --->   */
+    animation: move-around 5s 1s infinite ease-in-out;
+}
+@keyframes move-around{
+    0%{
+        top: 0;
+        left: 0;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color:black;
+    }
+    12.5%{
+        top: 0;
+        left: 250px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: red;
+    }
+    25%{
+        top: 0;
+        left: 500px;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color:black;
+    }
+    37.5%{
+        top: 250px;
+        left: 500px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: red;
+    }
+    50%{
+        top: 500px;
+        left: 500px;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color:black;
+    }
+    62.5%{
+        top: 500px;
+        left: 250px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: red;
+    }
+    75%{
+        top: 500px;
+        left: 0;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color:black;
+    }
+    87.5%{
+        top: 250px;
+        left: 0px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: red;
+    }
+    100%{
+        top: 0;
+        left: 0;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color:black;
+    }
+}

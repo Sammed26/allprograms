@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+.hamburger-menu li{
+    list-style: none;
+    font-weight: 600;
+}
+
+.hamburger-menu{
+    position: relative;
+    max-width: 300px;
+}
+.hamburger-menu .menu-items{
+    padding-top: 80px;
+    padding-left: 15px;
+    transform: translate(-110%);
+    transition: all 0.5s ease-in-out;
+    color: black;
+    margin-top: -10px;
+    margin-left: -10px;
+    padding-bottom: 20px;
+}
+.hamburger-menu .menu-items li{
+    padding: 10px;
+}
+.hamburger-menu .menu-items li a{
+    text-decoration: none;
+    color: black;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .menu-items{
+    transform: translate(0%);
+    background: black;
+}
+.hamburger-menu input[type="checkbox"]:checked ~ .menu-items li a{
+    color: white;
+}
+
+.hamburger-menu input[type="checkbox"]{
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    top: 5px;
+    left: 5px;
+    z-index: 4;   /* used to float cheakbox over lines */
+    opacity: 0;
+    
+    margin: 10px;
+    
+}
+.hamburger-menu .menu-lines{
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    top: 7px;
+    left: 7px;
+    z-index: 2;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.hamburger-menu .menu-lines .line{
+    width: 100%;
+    display: block;
+    height: 5px;
+    background: black;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger-menu .menu-lines .line3{
+    transform-origin: 0% 0%;
+}
+.hamburger-menu .menu-lines .line1{
+    transform-origin: 0% 100%;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .menu-lines .line1{
+    transform: rotate(45deg);
+    background: white;
+}
+.hamburger-menu input[type="checkbox"]:checked ~ .menu-lines .line2{
+    display: none;
+}
+.hamburger-menu input[type="checkbox"]:checked ~ .menu-lines .line3{
+    transform: rotate(-45deg);
+    background: white;
+}
+
+

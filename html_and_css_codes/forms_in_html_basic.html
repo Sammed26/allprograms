@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HTML forms</title>
+</head>
+<body>
+    <h1>Basic HTML Form</h1>
+    
+    <form action="list_table_and_basic.html" method="get">
+
+        <label for="user">Username</label>   <!-- 'for' and 'id' in label and input are used to link each other. If we click on label also it take input, if we not link this then we need to click only on input field provided -->
+        <input type="text" id="user">   <!-- type is used to take input of defined type -->
+        
+        <br><br>
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass">
+
+        <br><br>
+
+        <label for="bdate">Date of Birth</label>
+        <input type="date" id="bdate" name="bdate">
+
+        <br><br>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age">
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <br><br>
+
+        <input type="submit" value="Click to submit">
+
+    </form>
+</body>

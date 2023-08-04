@@ -1,0 +1,21 @@
+.box{
+    width: 500px;
+    background-color: black;
+    color: white;
+    animation-name: grow-box;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes grow-box{
+    from{
+        width: 500px;
+        content: none;
+    }
+    to{
+        width: 1000px;
+        height: auto;
+    }
+}

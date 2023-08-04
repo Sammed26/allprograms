@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../events_basic.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar container">
+            <h1 class="heading">
+                Million dollar website
+            </h1>
+            <ul class="navbar-ul">
+                <li class="navbar-item">
+                    <a href="#home">Home</a>
+                </li class="navbar-item">
+                <li class="navbar-item">
+                    <a href="#add-task">Todo</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#signup">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <div class="manage-tasks-section">
+            <h1>Manage Your Tasks <span style="display: none;">hidden text</span></h1>
+            <a href="#" class="btn manage-tasks-section-btn" /*onclick="console.log('learn more is clicked')" */ >Learn More</a>
+        </div>
+    </header>
+
+    <section class="add-task-section" id="add-task">
+        <div class="container">
+            <div class="task-add">
+                <h1>Add tasks</h1>
+            </div>
+            <div class="task-add-input">
+                <input type="text" placeholder="Enter & add tasks">
+                <a href="#" class="task-add-btn">Add task</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="signup">
+        <div class="container form">
+            <div class="form-heading">
+                <h1>Sign up</h1>
+            </div>
+            <form class="signup-form">
+                <div class="first-form-ele">
+                    <label for="name">Enter Name : </label> <br>
+                    <input type="text" class="input-without-submit" placeholder="first middle last">
+                </div>
+                <div>
+                    <label for="email">Email : </label> <br>
+                    <input type="text" class="input-without-submit" placeholder="abc@gmail.com">
+                </div>
+                <div>
+                    <label for="gender">Gender : </label> <br>
+                    <input type="text" class="input-without-submit">
+                </div>
+                <div class="text-area">
+                    <textarea id="text-box" cols="30" rows="10" placeholder="Type more information here"></textarea>
+                </div>
+                <input class="btn form-btn" type="submit">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

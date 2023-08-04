@@ -1,0 +1,104 @@
+
+
+/* universal selector = selects all and apply mentioned effect 
+   but we mostly not use this 
+*/
+/* *{
+    color: #ff0000;
+} */
+
+/* accessing particular heading or section or any other tag, but remember that effect is applied to all tags that we mentione here. ex. if h1 used then all h1's are affected, if class or id is not used  */
+/* section{
+    color: #ff0000;
+} */
+/* but by using class or id we can add effect to specific element  */
+/* section.second_section{
+    color: yellow;
+} */
+
+/* all h2 in section(second_section) are applied effect */
+/* section.second_section h2{
+    background-color: blue;
+} */
+
+
+/* in section(second_section) only h2 which is direct child of section is having that effect. 
+ ex. if <section>
+<h2>
+<article>
+<h2> 
+</section>
+
+when we write ==
+section.second_section > h2{
+    color: blue;
+}
+
+then effect is applied to only h2 which is present direct below in section tag not in section tags' other tag 
+*/
+section.second_section > h2{
+    background-color: blue;
+}
+
+/* effect is applied to only one p which are coming just after article tag */ 
+article+p{
+    color: rgb(255, 106, 0);
+}
+
+/* to select the form's input tag use */
+input[type = "password"]
+{
+    color: blue;
+    background-color: yellow;
+}
+
+input[type = "text"]
+{
+    color: rgb(170, 255, 0);
+}
+
+/* to select anchor tags */
+
+/* used to select by providing whole url */
+a[href="https://google.com"]
+{
+    color: yellowgreen;
+}
+
+/* this means that wherever microsoft word comes selects that */
+a[href *= "microsoft"]
+{
+    color: blue;
+}
+
+/* this is used to apply effect to links which are starting with given word */
+a[href ^= "https"]
+{
+    background-color: yellow;
+}
+
+/* this is used to apply effect to links which ends with given word */
+a[href $= ".in"]
+{
+    color: blueviolet;
+    background-color: skyblue;
+}
+
+/* borders in css */
+form{
+    border: 5px solid red;
+}
+
+a[href *= '.']
+{
+    border-width: 4px;
+    border-style: dotted;
+    border-color: blue;
+}
+
+h1{
+    border-bottom: 4px solid green;
+    border-left: 4px solid green;
+    border-right: 4px solid green;    
+    border-radius: 50px;
+}

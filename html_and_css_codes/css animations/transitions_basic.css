@@ -1,0 +1,26 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background: black;
+
+    /* transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: ease-in; */
+
+    /* this above need to write for all properties seperately or like ---> */
+    
+    /* transition: background 1s ease-in,
+                         width 1s ease-in,
+                         height 1s ease-in; */
+
+    /* and if you want to apply transitions to all properties then you may use --->  */
+    transition: all 1s ease-in;
+
+}
+
+.box:hover{   
+    /* if transitions is not applied this occurs very fast and which is not looking good tho avoid this transitions used */
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+}

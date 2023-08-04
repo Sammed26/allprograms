@@ -1,0 +1,16 @@
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background: red;
+    transform-origin: left top;
+    transition: transform 1s ease-in-out;
+
+}
+.box:hover{
+    /* transform: rotate(90deg); */
+    /* transform: skew(20deg); */
+    /* transform: translate(200px); */
+    transform: translate(100%);  /* 50% of its own width or heights */
+    /* transform: scale(2);  scaled 2 times the original in both axis */
+}

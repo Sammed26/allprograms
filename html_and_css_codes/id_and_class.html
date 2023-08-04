@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id and class</title>
+
+    <!-- Below used style is a css part -->
+    <!-- here problem in h1 is if we use it without class and id changes will applied to all h1's. And hence to specify uniqueness of this class and id are used -->
+    <style>
+        #heading1{
+            color: rgb(60, 0, 255);
+        }
+        #heading2{
+            color: red;
+        }
+        .paragraph{
+            color: green;
+        }
+        /* .paragraph2{
+            color: pink;
+        } */
+
+    </style>
+
+</head>
+<body>
+
+    <!-- 'id' are unique means one 'id' should be used to work with only one area(element)(this is not rule but recommended). But we can use same class and use to change or work with elements (this is shown with paragraphs in this code) -->
+
+    <!--
+         class are accessed by '.class_name' 
+         id are accessed by '#idname'
+    -->
+
+    <h1 id="heading1">first heading</h1>
+    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sequi eius maxime tenetur explicabo fugiat animi suscipit. Consectetur, officiis magnam. Ad quod maxime ut facere tempore id eum. Saepe, impedit.</p>
+    
+    <h1 id="heading">second heading</h1>
+    <p class="paragraph2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis autem ullam provident molestias a est ad, sint quam fugiat atque molestiae odio. Quidem iste dolorem officia harum ipsum magnam tempore.</p>
+
+</body>
+</html>
