@@ -2,7 +2,7 @@ console.log("this is all about set");
 
 const array = [1, 34, 36, 7, 56, 8];
 
-const numbers = new Set('1', '2');
+const numbers = new Set('1');
 numbers.add(array);
 numbers.add(34);
 
