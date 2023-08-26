@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body{
+    font-family: sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.whole-page{
+    background: rgba(212, 209, 209, 0.531);
+
+}
+
+/* ============= utility classes ============= */
+
+.container{
+    max-width: 1300px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+
+/* ============ navbar styling ================ */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding-top: 1rem;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+
+}
+.navbar ul li{
+    padding-left: 5rem;
+
+}
+.navbar ul li a{
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid blueviolet;
+}
+.name h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    padding: 1rem 0;
+}
+
+
+
+
+
+/* ================== main-home-content styling ==================== */
+
+.photo-name{
+    background: linear-gradient(rgba(92, 235, 251, 0.438), rgba(92, 235, 251, 0.438));
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px 20px 0px 0px;
+}
+.main-home-content{
+    width: 98%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.192);
+    border-radius: 20px;
+}
+.photo img{
+    height: 40vh;
+    width: 60%;
+    
+}
+.photo{
+    width: 40%;
+    text-align: left;
+    padding-top: 5rem;
+    padding-left: 6rem;
+}
+.description-section{
+    width: 60%;
+    text-align: center;
+    margin: auto 0;
+}
+
+.description-section h1{
+    font-size: 5rem;
+}
+.description-section p{
+    font-size: 2rem;
+    padding: 1.5rem 0;
+}
+.social-links i{
+    padding: 1rem;
+
+}
+.social-links a{
+    color: black;
+}
+
+
+
+/* ================== about styling =================== */
+
+.about{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+.info{
+    width: 50%;
+    text-align: left;
+    padding-left: 2rem;
+}
+.details{
+    width: 50%;
+    text-align: left;
+    padding-left: 20rem;
+}
+.info h2{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid black;
+    width: 90%;
+}
+.info p{
+    font-size: 1.5rem;
+    padding: 1rem;
+    line-height: 2.5rem;
+}
+
+.details table td{
+    font-size: 1.5rem;
+}
+.details table td:nth-child(2)
+{
+    padding-left: 3rem;
+}
+.details table tr{
+    height: 3rem;
+
+}
+
+.details table tr td:first-of-type{
+    font-weight: 600;
+}
+
+
+
+
+
+/* ================= footer styling ============= */
+
+.footer{
+    height: 5rem;
+    background: black;
+
+}
+.footer p{
+    color:  white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 1.8rem;
+}
