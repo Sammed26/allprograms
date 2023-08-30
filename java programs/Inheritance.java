@@ -41,6 +41,10 @@ class derived extends base
         super(valx);
         this.y = valy;
     }
+    derived(int valy)
+    {
+        this.y = valy;
+    }
     void sety(int val)
     {
         this.y = val;
@@ -61,7 +65,7 @@ public class Inheritance
 {
     public static void main(String[] args)
     {
-        derived d1 = new derived(26, 36);
+        derived d1 = new derived(26);
         //d1.setx(26);
         //System.out.println("value of x is " + d1.getx());
         System.out.println(d1.getx());
