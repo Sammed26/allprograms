@@ -189,7 +189,7 @@ a{
 /* ================= footer styling ============= */
 
 .footer{
-    height: 5rem;
+    height: 7rem;
     background: black;
 
 }
@@ -197,7 +197,7 @@ a{
     color:  white;
     text-align: center;
     font-size: 1.2rem;
-    padding-top: 1.8rem;
+    padding-top: 2rem;
 }
 
 
@@ -221,9 +221,10 @@ a{
     border-bottom: 5px solid rgba(0, 0, 0, 0.617);
     /* border-left: none;
     border-right: none; */
-    border-radius: 50px;
+    /* border-radius: 50px; */
     width: 30%;
     margin-bottom: 3rem;
+
 }
 .contact-page-header{
     padding: 1rem 2rem 0 2rem;
@@ -252,6 +253,7 @@ a{
     float: left;
     width: 50%;
     padding-bottom: 2.5rem;
+    
 }
 .contact-entity2{
     float: right;
@@ -291,5 +293,116 @@ a{
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
   
+}
+
+.contact-icon{
+    font-size: 5rem;
+    padding-bottom: 1rem;
+}
+
+.contact-entity1 p:nth-child(2),
+.contact-entity2 p:nth-child(2){
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* ======================== media queries ============================= */
+
+@media (max-width: 1080px)
+{
+    html{
+        font-size: 8px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 895px)
+{
+    .about{
+        display: block;
+        
+    }
+    .info{
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .details{
+        width: 100%;
+    }
+    .photo-name{
+        display: block;
+        height: 70vh;
+    }
+    .photo{
+        width: 100%;
+        text-align: center;
+    }
+    .description-section{
+        width: 100%;
+        text-align: center;
+    }
+    .photo img{
+        text-align: center;
+        margin-left: -5rem;
+        /* height: 25vh; */
+        padding-bottom: 1rem;
+    }
+    .info h2{
+        font-size: 3rem;
+    }
+    .info p{
+        font-size: 1.5rem;
+    }
+    .contact-entity p{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 599px)
+{
+
+    .about{
+        display: block;
+    }
+    .info{
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .details{
+        width: 100%;
+    }
+    .photo-name{
+        display: block;
+        height: 70vh;
+    }
+    .photo{
+        width: 100%;
+        text-align: center;
+    }
+    .description-section{
+        width: 100%;
+        text-align: center;
+    }
+    .photo img{
+        text-align: center;
+        margin-left: -5rem;
+        /* height: 25vh; */
+        padding-bottom: 1rem;
+    }
+    .info h2{
+        font-size: 3rem;
+    }
+    .info p{
+        font-size: 1.5rem;
+    }
+    .contact-entity p{
+        font-size: 2rem;
+    }
+    
 }
 
