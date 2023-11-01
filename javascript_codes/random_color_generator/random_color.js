@@ -20,7 +20,7 @@ const keypress_event_output = document.querySelector(".main-output");
 // console.log(keypress_event_output);
 button.addEventListener("keypress", (e)=>{
     keypress_event_output.textContent += e.key;
-    // console.log(e.key);
+     console.log(e.key);
 })
 
 // mouse hover event
