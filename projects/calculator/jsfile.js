@@ -35,16 +35,28 @@ clear.addEventListener("click", ()=>{
     screen_text.innerText = 0;
 })
 
-
+// 5+2*6*8
 
 const ans = document.querySelector(".ans");
 
 ans.addEventListener("click", ()=>{
-    
-    let first_operand
+    let first_operand;
+    let second_operand;
+
+    // for multiplication
     for(let i = 0; i<whole_equation.length; i++)
     {
         // console.log("hi");
+        if(whole_equation[i] == '*')
+        {
+            let j = i-1;
+            while(j != -1 || whole_equation[j] == '+' || whole_equation[j] == '-')
+            {
+                j--;
+            }
+            first_operand = +whole_equation.substring(j++, i-1);
+            console.log(first_operand);
+        }
 
     }
 

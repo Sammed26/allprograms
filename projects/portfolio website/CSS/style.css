@@ -17,10 +17,14 @@ ul{
 }
 a{
     text-decoration: none;
+    color: white;
 }
 
 .whole-page{
-    background: rgba(212, 209, 209, 0.531);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('../Images/markus-spiske-Skf7HxARcoc-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -87,11 +91,19 @@ a{
 /* ================== main-home-content styling ==================== */
 
 .photo-name{
-    background: linear-gradient(rgba(92, 235, 251, 0.438), rgba(92, 235, 251, 0.438));
+    background: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.164));
     height: 45vh;
     display: flex;
     justify-content: space-around;
     border-radius: 20px 20px 0px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    
+}
+.home .header .name h1{
+    color: white;
 }
 .main-home-content{
     width: 98%;
@@ -125,7 +137,7 @@ a{
 }
 .social-links i{
     padding: 1rem;
-
+    color: white;
 }
 .social-links a{
     color: black;
@@ -155,19 +167,19 @@ a{
     padding-left: 20rem;
 }
 .info h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-bottom: 1rem;
     border-bottom: 3px solid black;
     width: 90%;
 }
 .info p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1rem;
     line-height: 2.5rem;
 }
 
 .details table td{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .details table td:nth-child(2)
 {
@@ -244,10 +256,11 @@ a{
 {
     font-size: 2rem;
     font-weight: 500;
+    color: white;
 }
 .contact-entity{
     padding: 3rem 0;
-    
+
 }
 .contact-entity1{
     float: left;
@@ -259,6 +272,7 @@ a{
     float: right;
     width: 50%;
     padding-bottom: 2.5rem;
+    color: white;
 }
 .contact-entity3{
     text-align: center;
@@ -286,12 +300,16 @@ a{
 }
 .contact-info{
     text-align: center;
-    background: linear-gradient(rgba(92, 235, 251, 0.438), rgba(92, 235, 251, 0.438));
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('../Images/contact_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 4rem 10rem;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.192);
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
+    color: white;
   
 }
 
@@ -303,8 +321,14 @@ a{
 .contact-entity1 p:nth-child(2),
 .contact-entity2 p:nth-child(2){
     text-decoration: underline;
+    color: white;
+    font-size: 2.5rem;
 }
-
+.contact-entity1 p:nth-child(1),
+.contact-entity2 p:nth-child(1){
+    color: white;
+    font-size: 3rem;
+}
 
 
 
@@ -336,6 +360,10 @@ a{
     line-height: 200%;
     
 }
+.about-whole-page{
+    color: white;
+    
+}
 
 
 
@@ -345,12 +373,16 @@ a{
 /* ===================== resume page styling ====================== */
 .resume-info{
     text-align: center;
-    background: linear-gradient(rgba(92, 235, 251, 0.438), rgba(92, 235, 251, 0.438));
+    background: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.235)) ,url('../Images/resume_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 4rem 10rem;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.192);
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
+    color: white;
 }
 .resume-info .resume-page .heading{
     font-size: 4rem;
@@ -374,7 +406,10 @@ a{
 /* ================================= project page styling =================== */
 .project-info{
     text-align: center;
-    background: linear-gradient(rgba(92, 235, 251, 0.438), rgba(92, 235, 251, 0.438));
+    background: linear-gradient(rgba(0, 0, 0, 0.424), rgba(0, 0, 0, 0.424)) ,url('../Images/projects_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 4rem 10rem;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.192);
@@ -510,11 +545,14 @@ a{
 @media (min-width: 300px) and (max-width: 599px)
 {
     html{
-        font-size: 5px;
+        font-size: 7px;
     }
 
     .about{
         display: block;
+    }
+    .about .info p{
+        font-size: 2rem;
     }
     .info{
         width: 100%;
@@ -538,8 +576,9 @@ a{
     .photo img{
         text-align: center;
         margin-left: -5rem;
-        /* height: 25vh; */
+        /* height: 50vh; */
         padding-bottom: 1rem;
+        width: 150px;
     }
     .info h2{
         font-size: 3rem;
