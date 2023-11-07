@@ -243,11 +243,25 @@ ul{
 
 .prev-btn-noticecontent-next-btn{
     position: relative;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }
 .prev-btn-noticecontent-next-btn .prev_btn,
 .prev-btn-noticecontent-next-btn .next_btn{
     position: absolute;
+}
+
+.notice-board-circles{
+    text-align: center;
+    margin-bottom: 8rem;
+    transition: all ease-in-out 0.3s;
+}
+.notice-board-circles button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 
