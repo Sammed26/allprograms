@@ -132,6 +132,7 @@ ul{
     height: 35rem;
     box-shadow: 0px 5px 10px 5px #00000076;
     border-radius: 10px;
+    transition: all ease-in-out 0.4s;
     
 }
 .notice-bord-content .image-part{
@@ -192,8 +193,9 @@ ul{
     transition: all ease-in-out 0.4s;
 }
 .buttons button:hover{
-    background: wheat;
+    background: white;
     color: black;
+    border: 2px solid black;
 }
 
 .notice1{
@@ -264,6 +266,214 @@ ul{
     background: rgba(0, 0, 0, 0.2);
 }
 
+
+
+
+
+
+
+/* ============================ event-section-styling===================== */
+
+.past-event-heading{
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin-top: 10rem;
+    text-align: center;
+    padding: 3rem 0 5rem 0;
+}
+.past-event-section{
+    display: grid;
+    grid-template-columns: 45rem 45rem 45rem;
+    gap: 5px 15px;
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+.event{
+    text-align: center;
+    height: 60rem;
+    /* border: 2px solid black; */
+    background: #ffffffab;
+    box-shadow: 5px 5px 10px black;
+    padding: 1rem;
+}
+.event img{
+    height: 30rem;
+}
+.event h1{
+    font-size: 2.8rem;
+    padding-top: 10rem;
+    text-transform: capitalize;
+}
+.event p{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.event-btns{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2.5rem;
+}
+.event-btns button{
+    background: red;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 35%;
+    height: 4.2rem;
+    cursor: pointer;
+    border: none;
+    transition: all ease-in-out 0.4s;
+}
+.event-btns button:hover{
+    background: rgba(0, 0, 0, 0.699);
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* ========================= inspiration section styling ==================== */
+
+.inspiration-section h1{
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin-top: 10rem;
+    text-align: center;
+    padding: 3rem 0 5rem 0;
+}
+.inspiration{
+    text-align: center;
+    padding-bottom: 5rem;
+    /* border: 2px solid black; */
+}
+.inspiration img{
+    height: 40vh;
+    width: auto;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 50%;
+}
+.inspiration-name{
+    font-size: 2.8rem;
+}
+.profession{
+    font-size: 2rem;
+}
+
+
+
+
+/* ================ feedback section styling ============= */
+
+.feedback{
+    width: 100%;
+    margin: 10rem 0 10rem 0;
+}
+.feedback::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.feedback input{
+    float: left;
+    width: 70%;
+    height: 7rem;
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    cursor: text;
+}
+.feedback button{
+    float: right;
+    height: 7rem;
+    width: 20%;
+    text-align: center;
+    font-size: 3rem;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+.feedback button:hover{
+    background-color: #ffffffff;
+    color: black;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+/* ==================== footer section styling =================== */
+
+.footer{
+    background: rgba(0, 0, 0, 0.831);
+    height: 40rem;
+}
+.footer .container{
+    display: flex;
+}
+.aisa-contacts img{
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: 10px;
+}
+.aisa-contacts span{
+    color: #fff;
+} 
+.aisa-contacts ul li{
+    padding-bottom: 2rem;
+}
+.other-links a{
+    color: white;
+}
+.location-image img{
+    display: inline-block;
+    height: 35rem;
+    margin-top: 2.5rem;
+}
+
+.aisa-contacts{
+    width: 33.33%;
+    text-align: center;
+    
+}
+.aisa-contacts .first-ul{
+    display: flex;
+}
+.location-image{
+    width: 33.33%;
+    text-align: center;
+}
+
+.other-links{
+    width: 33.33%;
+    text-align: center;
+    display: flex;
+    padding-top: 2.5rem;
+    
+}
+.other-links .first-ul{
+    width: 50%;
+}
+.other-links .second-ul{
+    width: 50%;
+}
+.other-links li{
+    padding: 2rem;
+}
+.other-links a{
+    font-size: 2.5rem;
+}
 
 
 
