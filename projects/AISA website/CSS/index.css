@@ -129,10 +129,13 @@ ul{
 /* ====================== notice board styling =================== */
 
 .notice-bord-content{
-    height: 35rem;
+    height: 40rem;
     box-shadow: 0px 5px 10px 5px #00000076;
     border-radius: 10px;
     transition: all ease-in-out 0.4s;
+    padding-top: 3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
     
 }
 .notice-bord-content .image-part{
