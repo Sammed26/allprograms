@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 5rem;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+
+
+/* ======================== utility classes ==================== */
+
+.container{
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    /* padding-top: 5rem; */
+}
+.main-content-container{
+    display: flex;
+}
+
+
+
+/* =========================== side bar styling ================== */
+
+.sidebar{
+    /* border: 3px solid black; */
+    width: 20%;
+    overflow: scroll;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+    
+    
+}
+.sidebar img{
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.name{
+    font-size: 2.2rem;
+    padding-top: 2rem;
+}
+.profession{
+    font-size: 1.6rem;
+    padding-top: 1rem;
+}
+.navbar{
+    margin-top: 4rem;
+    height: 40vh;
+    margin-bottom: 4rem;
+}
+.navbar li{
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-top: 2rem;
+
+}
+.navbar li a{
+    color: black;
+    text-transform: capitalize;
+}
+.footer-para{
+    margin-top: 3rem;
+    font-size: 1.4rem;
+}
+
+
+
+
+/* ======================== main content styling ==================== */
+
+.main-content{
+    /* border: 3px solid black; */
+    width: 75%;
+    /* overflow: scroll; */
+
+    /* line-height: 300px; */
+    margin-left: 25%;
+
+}
+
+
+/* ====================== home styling ========= */
+
+.home{
+    background: url('./img/home1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+}
+.second-intro{
+    background: linear-gradient(rgba(0,0,0, 0.45), rgba(0, 0, 0, 0.059));
+    border-radius: 20px;
+    display: none;
+    padding: 1rem 1rem 1rem 5rem;
+    z-index: 5;
+    width: 80%;
+    box-shadow: 5px 5px 5px 7px rgba(0, 0, 0, 0.232);
+    transform: translate(0, 150%);
+    animation: intro 1s ease-out forwards;
+    transition: all 0.7s ease-in-out;
+}
+@keyframes intro {
+    0%{
+        display: block;
+        transform: translate(0, 0%)
+    }
+    100%{
+        transform: translate(0, 170%);
+    }
+}
+.first-intro{
+    /* background: linear-gradient(rgba(0,0,0, 0.45), rgba(0,0,0, 0.45)); */
+    box-shadow: 5px 5px 5px 7px rgba(0, 0, 0, 0.232);
+    border-radius: 20px;
+    width: 80%;
+    padding: 1rem 1rem 1rem 5rem;
+    /* background-color: white; */
+    /* border: 2px solid white; */
+    z-index: 5;
+    transform: translate(0, 150%);
+    animation: intro 1s ease-out forwards;
+    transition: all 0.7s ease-in-out;
+
+}
+@keyframes intro {
+    0%{
+        display: block;
+        transform: translate(0, 0%)
+    }
+    100%{
+        transform: translate(0, 170%);
+    }
+}
+.first-para{
+    font-size: 3.2rem;
+    padding-bottom: 2rem;
+    color: white;
+    
+}
+.second-para{
+    font-size: 1.8rem;
+    color: white;
+    padding-bottom: 2rem;
+}
+.second-intro .first-para{
+    font-size: 3.2rem;
+    padding-bottom: 2rem;
+    color: white;
+    
+}
+.second-intro .second-para{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 2rem;
+}
+.intro-btn{
+    width: 35%;
+    outline: none;
+    height: 4rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    background: red;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.intro-btn:hover{
+    background: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* ==================== about section styling ================ */
+.about-content{
+    margin: 20rem 0;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    /* animation: about 0.5s ease-in-out forwards;
+    
+    transform: translate(-100%, 0); */
+}
+/* @keyframes about {
+    100%{
+        display: block;
+        transform: translate(0, 0);
+    }
+} */
+
+.title{
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding-bottom: 3rem;
+}
+.about-content h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6rem;
+    padding-bottom: 8rem;
+}
+
+.about-text .para1,
+.about-text .para2{
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    font-weight: 300;
+}
+.cards{
+    padding-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.card{
+    width: 20%;
+    text-align: center;
+    height: 150px;
+    /* background-color: black; */
+    box-shadow: 7px 7px 10px 10px rgba(0, 0, 0, 0.119);
+    color: black;
+}
+.card p:first-of-type{
+    margin-top: 3rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+.card .tag{
+    margin-top: 30%;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+/* ========================= skills section styling =================== */
+
+.skills-content{
+    padding-left: 5rem;
+    margin: 15rem 0;
+    padding-top: 5rem;
+}
+.skills-content h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6rem;
+    padding-bottom: 8rem;
+}
+.skills-content .para1{
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    font-weight: 300;
+}
+.skills ul{
+    list-style: circle;
+    padding-left: 4rem;
+}
+.skills ul li{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+
+
+
+
+
+/* ============================== education section styling ================ */
+
+
+.education-content{
+    padding-left: 5rem;
+    margin: 20rem 0;
+}
+
+.education-content h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6rem;
+    padding-bottom: 8rem;
+}
+
+.education-title-btn{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(231, 229, 227);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 0.5rem;
+
+}
+/* .education-title-btn:hover{
+    background: rgb(156, 93, 215);
+    color: white;
+} */
+.education-title-btn p:first-of-type{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 2rem 2rem;
+
+}
+.education-title-btn .sign{
+    font-size: 3rem;
+    padding: 1rem 2rem;
+}
+
+.edu-info{
+    border: 1px solid rgba(0, 0, 0, 0.29);
+    margin: 0.5rem 0.5rem;
+    display: none;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.edu-info .first-info{
+    font-size: 1.5rem;
+    padding: 3rem 2.5rem 3rem 2rem;
+}
+.edu-info .marks-info{
+    font-size: 1.8rem;
+    padding: 0 0 3rem 3rem;
+}
+.marks-info span{
+    padding-right: 2rem;
+    font-size: 3rem;
+}
+
+
+
+
+
+/* ======================= experience section styling ========================== */
+
+.experience-content{
+    padding-left: 5rem;
+    margin: 20rem 0;
+}
+
+.experience-content h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6rem;
+    padding-bottom: 8rem;
+}
+.experience{
+    margin-left: 5rem;
+    height: 25rem;
+    /* width: 80%; */
+    border: 1px solid black;
+    background: rgb(231, 229, 227);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.157);
+    padding: 3rem;
+
+}
+.experience .experience-para{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.experience .experience-para span{
+    margin-left: 2rem;
+    font-size: 1.8rem;
+}
+.experience-info{
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-top: 2rem;
+    line-height: 2.5rem;
+}
+.experience-joiner{
+    height: 5rem;
+    border-left: 5px solid rgba(0, 0, 0, 0.400);
+    border-radius: 5px solid rgba(0, 0, 0, 0.400);
+    transform: translate(51%, 0);
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    margin: 1rem auto 0 auto;
+
+}
+
+.experience-ender{
+    position: relative;
+    top: 0%;
+    left: 50%;
+    font-size: 5rem;
+    transform: translate(-1%, 0%);
+    font-weight: 600;
+    height: 20rem;
+}
+.coming-more{
+    margin-left: 2rem;
+    text-align: center;
+    /* margin-bottom: 1rem; */
+    
+}
+.coming-more .coming{
+    border: 1px solid black;
+    width: 30%;
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    padding: 2rem;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(167, 227, 227);
+    font-size: 2rem;
+    
+}
+.circle{
+    margin: 0 auto 1rem auto;
+    width: 20px;
+    height: 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.400);
+    transform: translate(50%, 0);
+    border-top: none;
+    /* background: rgba(0, 0, 0, 0.400); */
+    
+}
+
+
+
+
+
+

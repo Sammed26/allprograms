@@ -44,7 +44,7 @@ prev_btn.addEventListener("click", ()=>{
     }
     else
     {
-        next_btn.style.display = "block";67
+        next_btn.style.display = "block";
     }
     all_notice[count+1].style.display = "none";
     all_notice[count].style.display = "block";

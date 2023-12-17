@@ -1,3 +1,5 @@
+// ---------------------- Ajax using callbacks --------------
+
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 const xhr = new XMLHttpRequest();
@@ -27,14 +29,28 @@ xhr.onreadystatechange = function(){
 
 // you know that you will get response after ready state is 4 then xhr.onload is a method which runs only when ready state is 4
 xhr.onload = function(){
-    const response1 = xhr.response;
-    // console.log(response1);
+    if(xhr.status >=200 && xhr.status < 300)
+    {
+        const response1 = xhr.response;
+        // console.log(response1);
+    
+        const data1 = JSON.parse(response1);
+        console.log(data1);
+        const para = document.querySelector("p");
+        const post1 = data1[10].title;
+        para.textContent = post1;
+        console.log(para);
+    }
+    else
+    {
+        console.log("some error occurred");
+    }
+}
 
-    const data1 = JSON.parse(response1);
-    console.log(data1);
-    const para = document.querySelector("p");
-    para.textContent = data1;
-    console.log(para);
+
+// this error is occurred when network related error is occurred
+xhr.onerror = function(){
+    console.log("network issue..........");
 }
 
 
