@@ -61,6 +61,21 @@ info1_btn.addEventListener("click", ()=>{
         info1_btn.style.color = "black";
     }
 })
+const btn1_text = document.querySelector(".degree-title1");
+info1_btn.addEventListener("mouseover", ()=>{
+    info1_btn.style.width = "110%";
+    info1_btn.style.height = "7rem";
+    info1_btn_sign.style.fontSize = "5rem";
+    btn1_text.style.fontSize = "2rem";
+
+})
+info1_btn.addEventListener("mouseout", ()=>{
+    info1_btn.style.width = "100%";
+    info1_btn.style.height = "6rem";
+    info1_btn_sign.style.fontSize = "3rem";
+    btn1_text.style.fontSize = "1.5rem";
+
+})
 
 
 const info2_btn = document.getElementById("info2-btn");
@@ -83,6 +98,19 @@ info2_btn.addEventListener("click", ()=>{
         info2_btn.style.color = "black";
     }
 })
+const btn2_text = document.querySelector(".degree-title2");
+info2_btn.addEventListener("mouseover", ()=>{
+    info2_btn.style.width = "110%";
+    info2_btn.style.height = "7rem";
+    info2_btn_sign.style.fontSize = "5rem";
+    btn2_text.style.fontSize = "2rem";
+})
+info2_btn.addEventListener("mouseout", ()=>{
+    info2_btn.style.width = "100%";
+    info2_btn.style.height = "6rem";
+    info2_btn_sign.style.fontSize = "3rem";
+    btn2_text.style.fontSize = "1.5rem";
+})
 
 
 const info3_btn = document.getElementById("info3-btn");
@@ -104,6 +132,20 @@ info3_btn.addEventListener("click", ()=>{
         info3_btn.style.background = "rgb(231, 229, 227)";
         info3_btn.style.color = "black";
     }
+})
+const btn3_text = document.querySelector(".degree-title3");
+info3_btn.addEventListener("mouseover", ()=>{
+    info3_btn.style.width = "110%";
+    info3_btn.style.height = "7rem";
+    info3_btn_sign.style.fontSize = "5rem";
+    btn3_text.style.fontSize = "2rem";
+
+})
+info3_btn.addEventListener("mouseout", ()=>{
+    info3_btn.style.width = "100%";
+    info3_btn.style.height = "6rem";
+    info3_btn_sign.style.fontSize = "3rem";
+    btn3_text.style.fontSize = "1.5rem";
 })
 
 
@@ -128,7 +170,20 @@ info4_btn.addEventListener("click", ()=>{
         
     }
 })
+const btn4_text = document.querySelector(".degree-title4");
+info4_btn.addEventListener("mouseover", ()=>{
+    info4_btn.style.width = "110%";
+    info4_btn.style.height = "7rem";
+    info4_btn_sign.style.fontSize = "5rem";
+    btn4_text.style.fontSize = "2rem";
 
+})
+info4_btn.addEventListener("mouseout", ()=>{
+    info4_btn.style.width = "100%";
+    info4_btn.style.height = "6rem";
+    info4_btn_sign.style.fontSize = "3rem";
+    btn4_text.style.fontSize = "1.5rem";
+})
 
 
 
