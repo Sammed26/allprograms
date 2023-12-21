@@ -614,7 +614,7 @@ a{
 
 }
 
-@media (max-width:1130px), (min-width768px){
+@media (max-width:1130px), (min-width:768px){
     /* -------------------------navbar media queries ------------------ */
 
     .navbar .navbar-container .hamburger-lines,

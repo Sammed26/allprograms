@@ -5,14 +5,14 @@ package package1;
 // all .class files are arraged accordingly as given package names
 
 
-import package2.Code5;
+// import package2.Code5;
 
 class Exam extends Code5
 {
     void method1()
     {
         // System.out.println(x);
-        System.out.println(y);
+        // System.out.println(y);
         // System.out.println(z);
         // System.out.println(a);
     }

@@ -4,58 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8158507904.js" crossorigin="anonymous"></script>
     <script src="jsfile.js" defer></script>
     <title>Portfolio</title>
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <img src="./img/home1.jpg" alt="my photo">
-
-            <h2 class="name">Sammed Koshti</h2>
-
-            <p class="profession">
-                Software Developer
-            </p>
-
-            <div class="navbar">
-                <ul>
-                    <li>
-                        <a href="#HOME">Home</a>
-                    </li>
-                    <li>
-                        <a href="#ABOUT">About</a>
-                    </li>
-                    <li>
-                        <a href="#SKILLS">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#EDUCATION">Education</a>
-                    </li>
-                    <li>
-                        <a href="#EXPERIENCE">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
+        <div class="sidebar-container">
+            <input type="checkbox" class="hamburger-input">
+            <div class="hamburger-lines">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
             </div>
-
-            <p class="footer-para">
-                &#169 Copyright 2023 All rights are reserved
-            </p>
-            <p class="footer-para">
-                &#169 2023 All rights are reserved
-            </p>
-            <p class="footer-para">
-                &#169 2023 All rights are reserved
-            </p>
-            
-
-
+            <div class="sidebar">
+                <img src="./img/home1.jpg" alt="my photo">
+    
+                <h2 class="name">Sammed Koshti</h2>
+    
+                <p class="profession">
+                    Software Developer
+                </p>
+    
+                <div class="navbar">
+                    <ul>
+                        <li>
+                            <a href="#HOME">Home</a>
+                        </li>
+                        <li>
+                            <a href="#ABOUT">About</a>
+                        </li>
+                        <li>
+                            <a href="#SKILLS">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#EDUCATION">Education</a>
+                        </li>
+                        <li>
+                            <a href="#EXPERIENCE">Experience</a>
+                        </li>
+                        <li>
+                            <a href="#PROJECTS">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#CONTACT">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <p class="footer-para">
+                    &#169 Copyright 2023 All rights are reserved
+                </p>
+                <p class="footer-para">
+                    &#169 2023 All rights are reserved
+                </p>
+                <p class="footer-para">
+                    &#169 2023 All rights are reserved
+                </p>
+                
+    
+    
+            </div>
         </div>
     
 
@@ -319,7 +328,7 @@
 
 
 
-            <div class="projects-content">
+            <div class="projects-content" id="PROJECTS">
                 <p class="title">
                     my work
                 </p>
@@ -328,8 +337,7 @@
                 </h2>
 
                 <div class="project-boxes">
-                    <div class="project-box-row1 project-row">
-
+                
                         <div class="box left-box box1">
                             <p class="project-title-onimage">
                                 this is project 1
@@ -342,23 +350,29 @@
                                     project1
                                 </p>
                                 <div class="project-buttons">
-                                    <button class="view-code">
-                                        view code
-                                    </button>
-                                    <button class="view-website">
-                                        view website
-                                    </button>
+                                    <a href="#">
+                                        <button class="view-code">
+                                            view code
+                                        </button>
+                                    </a>
+                                    <a href="#">
+                                        <button class="view-website">
+                                            view website
+                                        </button>
+                                    </a>
                                 </div>
                                 <br>
-                                <button class="know-more">
-                                    Know more   <!-- here i have to give github readme file link -->
-                                </button>
+                                <a href="#">
+                                    <button class="know-more">
+                                        Know more
+                                    </button>
+                                </a>
                             </div>
                         </div>
                         
                         <div class="box right-box box2">
                             <p class="project-title-onimage">
-                                this is project 1
+                                this is project 2
                             </p>
                             <p class="project-description">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vitae voluptatem modi praesentium eligendi ullam, rem non reiciendis corrupti nostrum.
@@ -368,24 +382,29 @@
                                     project1
                                 </p>
                                 <div class="project-buttons">
-                                    <button class="view-code">
-                                        view code
-                                    </button>
-                                    <button class="view-website">
-                                        view website
-                                    </button>
+                                    <a href="#">
+                                        <button class="view-code">
+                                            view code
+                                        </button>
+                                    </a>
+                                    <a href="#">
+                                        <button class="view-website">
+                                            view website
+                                        </button>
+                                    </a>
                                 </div>
                                 <br>
-                                <button class="know-more">
-                                    Know more
-                                </button>
+                                <a href="#">
+                                    <button class="know-more">
+                                        Know more
+                                    </button>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="project-box-row2 project-row">
+                    
                         <div class="box left-box box3">
                             <p class="project-title-onimage">
-                                this is project 1
+                                this is project 3
                             </p>
                             <p class="project-description">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vitae voluptatem modi praesentium eligendi ullam, rem non reiciendis corrupti nostrum.
@@ -395,22 +414,28 @@
                                     project1
                                 </p>
                                 <div class="project-buttons">
-                                    <button class="view-code">
-                                        view code
-                                    </button>
-                                    <button class="view-website">
-                                        view website
-                                    </button>
+                                    <a href="#">
+                                        <button class="view-code">
+                                            view code
+                                        </button>
+                                    </a>
+                                    <a href="#">
+                                        <button class="view-website">
+                                            view website
+                                        </button>
+                                    </a>
                                 </div>
                                 <br>
-                                <button class="know-more">
-                                    Know more
-                                </button>
+                                <a href="#">
+                                    <button class="know-more">
+                                        Know more
+                                    </button>
+                                </a>
                             </div>
                         </div>
                         <div class="box right-box box4">
                             <p class="project-title-onimage">
-                                this is project 1
+                                this is project 4
                             </p>
                             <p class="project-description">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vitae voluptatem modi praesentium eligendi ullam, rem non reiciendis corrupti nostrum.
@@ -420,24 +445,109 @@
                                     project1
                                 </p>
                                 <div class="project-buttons">
-                                    <button class="view-code">
-                                        view code
-                                    </button>
-                                    <button class="view-website">
-                                        view website
-                                    </button>
+                                    <a href="#">
+                                        <button class="view-code">
+                                            view code
+                                        </button>
+                                    </a>
+                                    <a href="#">
+                                        <button class="view-website">
+                                            view website
+                                        </button>
+                                    </a>
                                 </div>
                                 <br>
-                                <button class="know-more">
-                                    Know more
-                                </button>
+                                <a href="#">
+                                    <button class="know-more">
+                                        Know more
+                                    </button>
+                                </a>
                             </div>
                         </div>
-                    </div>
                 </div>
 
             </div>
 
+
+
+
+            
+            <div class="contact-content" id="CONTACT">
+                <p class="title">
+                    get in touch
+                </p>
+                <h2>
+                    contact
+                </h2>
+
+                <div class="contact">
+                    <ul class="first-ul">
+                        <li>
+                            <span class="icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <br>
+                            <p>
+                                sammedkoshti26@gmail.com
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <i class="fa-regular fa-address-card"></i>
+                            </span>
+                            <br>
+                            <p>
+                                Kolhapur Maharashtra, India
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <i class="fa-regular fa-phone"></i>
+                            </span>
+                            <br>
+                            <p>
+                                +91 ----------
+                            </p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github"></i>
+                                </span>
+                                <br>
+                                <p>
+                                    Github profile
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon">
+                                    <i class="fa-solid fa-terminal"></i>
+                                </span>
+                                <br>
+                                <p>
+                                    Leetcode profile
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                                <br>
+                                <p>
+                                    Linkedin
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
 
 
 
@@ -450,3 +560,33 @@
     </div>
 </body>
 </html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+

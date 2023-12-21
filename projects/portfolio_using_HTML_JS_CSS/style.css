@@ -24,6 +24,16 @@ ul{
 
 
 
+
+/* ====================== toggle theme =================== */
+:root{
+    --color-body: hsl(0, 50%, 50%);
+}
+
+
+
+
+
 /* ======================== utility classes ==================== */
 
 .container{
@@ -47,8 +57,19 @@ ul{
     height: 100vh;
     text-align: center;
     position: fixed;
-    padding-top: 5rem;
-    
+    background: rgb(222, 222, 222);
+    opacity: 1;
+
+}
+.sidebar-container{
+    position: fixed;
+    width: 6rem;
+    height: 10rem;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    background: white;
+    opacity: 0.9;
 }
 .sidebar img{
     width: 20rem;
@@ -67,7 +88,7 @@ ul{
 }
 .navbar{
     margin-top: 4rem;
-    height: 40vh;
+    height: 30rem;
     margin-bottom: 4rem;
 }
 .navbar li{
@@ -79,11 +100,23 @@ ul{
 .navbar li a{
     color: black;
     text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.navbar li a:hover{
+    border-bottom: 2px solid black;
+    text-transform: uppercase;
 }
 .footer-para{
+    padding: 2rem;
     margin-top: 3rem;
     font-size: 1.4rem;
 }
+
+
+
+
+
 
 
 
@@ -108,6 +141,7 @@ ul{
     height: 95vh;
     position: relative;
     transition: all 0.4s ease-in-out;
+    
     
 }
 .second-intro{
@@ -143,7 +177,7 @@ ul{
     transform: translate(0, 150%);
     animation: intro 1s ease-out forwards;
     transition: all 0.7s ease-in-out;
-
+    
 }
 @keyframes intro {
     0%{
@@ -203,9 +237,9 @@ ul{
 
 /* ==================== about section styling ================ */
 .about-content{
-    margin: 20rem 0;
-    padding-top: 2rem;
     padding-left: 5rem;
+    margin: 15rem 0;
+    padding-top: 5rem;
     /* animation: about 0.5s ease-in-out forwards;
     
     transform: translate(-100%, 0); */
@@ -307,7 +341,8 @@ ul{
 
 .education-content{
     padding-left: 5rem;
-    margin: 20rem 0;
+    margin: 15rem 0;
+    padding-top: 5rem;
 }
 
 .education-content h2{
@@ -329,7 +364,7 @@ ul{
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     margin: 0.5rem;
-
+    
 }
 /* .education-title-btn:hover{
     background: rgb(156, 93, 215);
@@ -340,7 +375,7 @@ ul{
     font-weight: 300;
     text-transform: uppercase;
     padding: 2rem 2rem;
-
+    
 }
 .education-title-btn .sign{
     font-size: 3rem;
@@ -352,7 +387,7 @@ ul{
     margin: 0.5rem 0.5rem;
     display: none;
     transition: all 0.4s ease-in-out;
-
+    
 }
 
 .edu-info .first-info{
@@ -376,7 +411,8 @@ ul{
 
 .experience-content{
     padding-left: 5rem;
-    margin: 10rem 0;
+    margin: 15rem 0;
+    padding-top: 5rem;
 }
 
 .experience-content h2{
@@ -394,7 +430,7 @@ ul{
     background: rgb(231, 229, 227);
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.157);
     padding: 3rem;
-
+    
 }
 .experience .experience-para{
     font-size: 2.5rem;
@@ -417,13 +453,13 @@ ul{
     border-radius: 5px solid rgba(0, 0, 0, 0.400);
     margin-top: 1rem;
     margin-left: 51%;
-
+    
 }
 
 .experience-ender{
     font-size: 5rem;
     font-weight: 600;
-    height: 20rem;
+    height: 5rem;
     width: 100%;
     text-align: center;
 }
@@ -475,7 +511,8 @@ ul{
 
 .projects-content{
     padding-left: 5rem;
-    margin: 10rem 0;
+    margin: 15rem 0;
+    padding-top: 5rem;
 }
 .projects-content h2{
     font-size: 2.2rem;
@@ -485,20 +522,16 @@ ul{
     padding-bottom: 8rem;
 }
 .project-boxes{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-columns: 50% 50%;
     width: 100%;
 }
-.project-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 35rem;
-    margin-bottom: 3rem;
-}
+
 .box{
     border: 2px solid black;
-    width: 45%;
+    width: 100%;
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('./img/home2.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -507,7 +540,7 @@ ul{
     text-align: center;
     height: 100%;
     position: relative;
-
+    
 }
 .box1{
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('./img/home1.jpg');
@@ -554,7 +587,7 @@ ul{
     color: white;
     font-size: 2.5rem;
     font-weight: 500;
-   
+    
 }
 .project-buttons button{
     width: 35%;
@@ -581,7 +614,7 @@ ul{
     height: 4rem;
     margin-bottom: 2rem;
     font-size: 2rem;
-    margin-left: 15%;
+    /* margin-left: 15%; */
     background: black;
     color: white;
     outline: none;
@@ -594,7 +627,7 @@ ul{
     color: white;
     border-radius: 10px;
 }
-.project-row .box::after{
+.box::after{
     content: "hello";
     display: block;
     position: absolute;
@@ -607,7 +640,7 @@ ul{
     z-index: 1;
     transition: all 0.5s ease-in-out;
 }
-.project-row .box:hover::after{
+.box:hover::after{
     background-color: rgba(0, 0, 0, 0.803);
     opacity: 1;
     z-index: 2;
@@ -627,6 +660,662 @@ ul{
 }
 
 
+
+
+
+
+
+
+/* ==================== contact section styling ================= */
+
+.contact-content{
+    padding-left: 5rem;
+    margin: 15rem 0;
+    padding-top: 5rem;
+}
+.contact-content h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6rem;
+    padding-bottom: 8rem;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.contact ul{
+    width: 45%;
+}
+.contact ul p{
+    display: inline-block;
+}
+.contact .icon{
+    padding: 3rem;
+    font-size: 10rem;
+    /* margin-right: 3rem; */
+    width: 90%;
+    height: 90%;
+    text-align: center;
+}
+.icon i{
+    font-size: 4rem;
+    background: white;
+    /* background-color: blue; */
+    transition: all 0.3s ease-in-out;
+    
+}
+.contact li p{
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+.contact ul li{
+    padding-bottom: 2rem;
+    padding-top: -1rem;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+.contact .first-ul{
+    border-right: 2px solid black;
+    width: 50%;
+}
+.contact ul li:hover{
+    background-color: black;
+    color: white;
+    border-radius: 5rem;
+    
+}
+.contact ul li:hover i{
+    color: white;
+    background: black;
+}
+.contact ul li:hover p{
+    color: white;
+}
+
+
+
+
+
+/* ======================= media queries starts ======================= */
+
+
+
+/* 320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.                ----> use hamburger menu
+769px — 1024px: Small screens, laptops.       ----> use hamburger menu
+1025px — 1200px: Desktops, large screens.     ----> use sidebar menu
+1201px and more — Extra large screens, TV.    ----> use sidebar menu
+ */
+
+
+
+ /* >>>>>>>>>>> for screen greater than 1200px  */
+ @media (min-width: 1200px) {
+    html{
+        font-size: 11px;
+    }
+    .sidebar{
+        padding-top: 3rem;
+    }
+    input[type="checkbox"]{
+        display: none;
+    }
+
+
+ }
+
+
+
+/* >>>>>>>>>>>>>> for screen size 1025px to 1200px */
+
+@media (min-width:1025px) and (max-width: 1200px)
+{
+    html{
+        font-size: 10px;
+    }
+    .contact ul li{
+        text-align: center;
+    }
+    .sidebar{
+        padding-top: 3rem;
+    }
+    input[type="checkbox"]{
+        display: none;
+    }
+    
+}
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>> for screen size 769px to 1024px */
+@media (min-width:769px) and (max-width: 1024px)
+{
+    html{
+        font-size: 11px;
+    }
+    .sidebar img{
+        margin-top: 6rem;
+    }
+    .main-content{
+        margin-left: 0%;
+        width: 100%;
+    }
+    .contact ul li{
+        text-align: center;
+    }
+    
+    
+    
+    /* **************hamburger menu for side bar ****************** */
+    .sidebar{
+        transform: translate(-130%);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+        padding-top: 1rem;
+        width: 40%;
+    }
+
+    
+    .container input[type="checkbox"]{
+        position: absolute;
+        z-index: 999;
+        top: 10px;
+        left: 4px;
+        background: black;
+        zoom: 2.8;
+        opacity: 0;
+    }
+    input[type="checkbox"]:checked ~ .sidebar{
+        transform: translate(0);
+    }    
+    .sidebar-container .hamburger-lines{
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        z-index: 5;
+        top: 30px;
+        left: 10px;
+        transition: all 0.3s ease-in-out;
+        /* border-left: 4px solid black; */
+        
+    }
+    
+    input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-right: 50%;
+        
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: translate(0, 6px) rotate(-45deg);
+        width: 60% 
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: translate(0, -6px) rotate(45deg);
+        width: 60%;
+    }
+    .hamburger-lines .line{
+        height: 5px;
+        width: 100%;
+        background: black;
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+}
+@media (min-width: 510px) and (max-width: 768px) {
+    html{
+        font-size: 9px;
+    }
+    .sidebar img{
+        margin-top: 6rem;
+    }
+    .main-content{
+        margin-left: 0%;
+        width: 90%;
+    }
+    .contact ul li{
+        text-align: center;
+    }
+    .cards{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .card{
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+    }
+    .experience-content .outer-div{
+        margin-left: -15%;
+    }
+    .experience{
+        height: 30rem;
+    }
+    .circle{
+        transform: translate(35%, 0);
+    }
+
+    .projects-content{
+        display: block;
+    }
+    .project-boxes{
+        display: block;
+        text-align: center;
+    }
+    .project-row{
+        display: block;
+        text-align: center;
+    }
+    .box{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+        border-radius: 5px;
+        height: 100%;
+    }
+
+
+    .contact ul li p{
+        font-size: 1.3rem;
+    }
+    .contact ul li{
+        height: 20rem;
+    }
+    
+
+    /* **************hamburger menu for side bar ****************** */
+    .sidebar{
+        transform: translate(-130%);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+        padding-top: 3rem;
+        width: 40%;
+    }
+
+    
+    .container input[type="checkbox"]{
+        position: absolute;
+        z-index: 999;
+        top: 10px;
+        left: 4px;
+        background: black;
+        zoom: 2.8;
+        opacity: 0;
+    }
+    input[type="checkbox"]:checked ~ .sidebar{
+        transform: translate(0);
+    }    
+    .sidebar-container .hamburger-lines{
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        z-index: 5;
+        top: 30px;
+        left: 10px;
+        transition: all 0.3s ease-in-out;
+        /* border-left: 4px solid black; */
+        
+    }
+    
+    input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-right: 50%;
+        
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: translate(0, 6px) rotate(-45deg);
+        width: 60% 
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: translate(0, -6px) rotate(45deg);
+        width: 60%;
+    }
+    .hamburger-lines .line{
+        height: 5px;
+        width: 100%;
+        background: black;
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+}
+
+
+
+/* >>>>>>>>>>>>> for screen size 320px to 509px */
+
+@media (min-width: 320px) and (max-width: 509px) 
+{
+    html{
+        font-size: 5px;
+    }  
+    .sidebar img{
+        margin-top: 6rem;
+    }  
+    .main-content{
+        margin-left: 0%;
+        width: 90%;
+    }
+    .contact ul li{
+        text-align: center;
+    }
+    .cards{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .card{
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+    }
+    .experience-content .outer-div{
+        margin-left: -15%;
+    }
+    .circle{
+        transform: translate(35%, 0);
+    }
+
+    .projects-content{
+        display: block;
+        margin-left: -3rem;
+    }
+    .project-boxes{
+        display: block;
+        text-align: center;
+    }
+    .project-row{
+        display: block;
+        text-align: center;
+    }
+    .box{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+        border-radius: 5px;
+        height: 40rem;
+    }
+
+
+    .contact{
+        display: block;
+    }
+    .contact ul{
+        width: 100%;
+    }
+    .contact .first-ul{
+        width: 100%;
+        border: none;
+    }
+    .contact ul li p{
+        font-size: 2rem;
+    }
+    .contact ul li{
+        height: 20rem;
+    }
+
+
+    .education-title-btn p:first-of-type{
+        font-size: 1px;
+    }
+    .experience{
+        height: 30rem;
+    }
+    
+    .home{
+        height: 60vh;
+    }
+    
+    .main-content{
+        width: 100%;
+    }
+
+    /* **************hamburger menu for side bar ****************** */
+    .sidebar{
+        transform: translate(-130%);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+        padding-top: 10rem;
+        width: 40%;
+    }
+
+    
+    .container input[type="checkbox"]{
+        position: absolute;
+        z-index: 999;
+        top: 10px;
+        left: 4px;
+        background: black;
+        zoom: 2.8;
+        opacity: 0;
+    }
+    input[type="checkbox"]:checked ~ .sidebar{
+        transform: translate(0);
+    }    
+    .sidebar-container .hamburger-lines{
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        z-index: 5;
+        top: 30px;
+        left: 10px;
+        transition: all 0.3s ease-in-out;
+        /* border-left: 4px solid black; */
+        
+        
+    }
+    
+    input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-right: 50%;
+        
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: translate(0, 6px) rotate(-45deg);
+        width: 60% 
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: translate(0, -6px) rotate(45deg);
+        width: 60%;
+    }
+    .hamburger-lines .line{
+        height: 5px;
+        width: 100%;
+        background: black;
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+
+}
+
+
+/* >>>>>>>>>>> for max screen size 300px */
+
+@media (max-width: 319px) {
+    html{
+        font-size: 5px;
+    }
+    .sidebar img{
+        margin-top: 6rem;
+    }
+    .main-content{
+        margin-left: 0%;
+        width: 90%;
+    }
+    .contact ul li{
+        text-align: center;
+    }
+    .cards{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .card{
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+    }
+    .experience-content .outer-div{
+        margin-left: -15%;
+    }
+    .circle{
+        transform: translate(35%, 0);
+    }
+
+    .projects-content{
+        display: block;
+        margin-left: -3rem;
+    }
+    .project-boxes{
+        display: block;
+        text-align: center;
+    }
+    .project-row{
+        display: block;
+        text-align: center;
+    }
+    .box{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+        border-radius: 5px;
+        height: 40rem;
+    }
+
+
+    .contact{
+        display: block;
+    }
+    .contact ul{
+        width: 100%;
+    }
+    .contact .first-ul{
+        width: 100%;
+        border: none;
+    }
+    .contact ul li p{
+        font-size: 2rem;
+    }
+    .contact ul li{
+        height: 20rem;
+    }
+
+
+    .education-title-btn p:first-of-type{
+        font-size: 1px;
+    }
+    .experience{
+        height: 30rem;
+    }
+    
+    .home{
+        height: 60vh;
+    }
+    
+    .main-content{
+        width: 100%;
+    }
+
+    .about-content,
+    .skills-content,
+    .education-content,
+    .experience-content,
+    .projects-content,
+    .contact-content{
+        padding-left: 2rem;
+    }
+
+
+    /* **************hamburger menu for side bar ****************** */
+    .sidebar{
+        transform: translate(-130%);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+        padding-top: 10rem;
+        width: 40%;
+    }
+
+
+    .container input[type="checkbox"]{
+        position: absolute;
+        z-index: 999;
+        top: 10px;
+        left: 4px;
+        background: black;
+        zoom: 2.8;
+        opacity: 0;
+    }
+    input[type="checkbox"]:checked ~ .sidebar{
+        transform: translate(0);
+        
+    }    
+    .sidebar-container .hamburger-lines{
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        z-index: 5;
+        top: 30px;
+        left: 10px;
+        transition: all 0.3s ease-in-out;
+        /* border-left: 4px solid black; */
+        
+    }
+    
+    input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-right: 50%;
+        
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: translate(0, 6px) rotate(-45deg);
+        width: 60% 
+    }
+    input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: translate(0, -6px) rotate(45deg);
+        width: 60%;
+    }
+    .hamburger-lines .line{
+        height: 5px;
+        width: 100%;
+        background: black;
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+}
+
+
+/* >>>>>>  for landscape view  */
+
+@media (orientation: landscape) and (max-height: 500px)
+{
+    html{
+        font-size: 6px;
+    }
+
+}
 
 
 
