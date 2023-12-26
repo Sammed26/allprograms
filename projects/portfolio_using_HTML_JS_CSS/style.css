@@ -9,11 +9,11 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 12px;
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    
+    background: var(--color-body);
 }
 a{
     text-decoration: none;
@@ -27,8 +27,46 @@ ul{
 
 /* ====================== toggle theme =================== */
 :root{
-    --color-body: hsl(0, 50%, 50%);
+    --color-body: hsl(0, 50%, 96%);
+    --color-text: hsl(0, 0%, 0%);
+    --shadow: hsla(0, 0%, 2%, 0.325); 
+    --background-box: rgba(228, 226, 226, 0.867);
+    --sidebar-background: rgb(222, 222, 222);
+    transition: all 0.4s ease-in-out;
+
+    
 }
+
+.dark-mode{
+    --color-body: hsl(0, 0%, 0%);
+    --color-text: hsl(0, 50%, 96%);
+    --shadow: hsl(0, 39%, 93%);
+    --background-box: rgba(75, 72, 72, 0.867);
+    --sidebar-background: rgba(222, 222, 222, 0.212);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle-theme{
+    position: fixed;
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: var(--color-text);
+    color: var(--color-body);
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    top: 1rem;
+    left: 90%;
+    z-index: 999;
+}
+.toggle-theme:hover{
+    color: var(--color-text);
+    background: var(--color-body);
+}
+
 
 
 
@@ -57,8 +95,9 @@ ul{
     height: 100vh;
     text-align: center;
     position: fixed;
-    background: rgb(222, 222, 222);
+    background: var(--sidebar-background);
     opacity: 1;
+    
 
 }
 .sidebar-container{
@@ -68,8 +107,10 @@ ul{
     top: 1rem;
     left: 1rem;
     z-index: 999;
-    background: white;
+    background: var(--color-body);
     opacity: 0.9;
+    color: var(--color-text);
+    padding-bottom: 5rem;
 }
 .sidebar img{
     width: 20rem;
@@ -98,13 +139,13 @@ ul{
 
 }
 .navbar li a{
-    color: black;
+    color: var(--color-text);
     text-transform: capitalize;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
 }
 .navbar li a:hover{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-text);
     text-transform: uppercase;
 }
 .footer-para{
@@ -128,6 +169,7 @@ ul{
     width: 75%;
     margin-left: 25%;
     padding-top: 5rem;
+    color: var(--color-text);
 }
 
 
@@ -141,7 +183,7 @@ ul{
     height: 95vh;
     position: relative;
     transition: all 0.4s ease-in-out;
-    
+    border-radius: 20px;
     
 }
 .second-intro{
@@ -176,7 +218,7 @@ ul{
     z-index: 5;
     transform: translate(0, 150%);
     animation: intro 1s ease-out forwards;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.5s ease-in-out;
     
 }
 @keyframes intro {
@@ -185,7 +227,7 @@ ul{
         transform: translate(0, 0%)
     }
     100%{
-        transform: translate(0, 170%);
+        transform: translate(0, 160%);
     }
 }
 .first-para{
@@ -219,13 +261,13 @@ ul{
     text-transform: capitalize;
     cursor: pointer;
     background: red;
-    color: white;
+    color: var(--color-text);
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
 }
 .intro-btn:hover{
-    background: black;
-    color: white;
+    background: var(--color-body);
+    color: var(--color-text);
 }
 
 
@@ -240,6 +282,7 @@ ul{
     padding-left: 5rem;
     margin: 15rem 0;
     padding-top: 5rem;
+    /* color: var(--color-text-about-me); */
     /* animation: about 0.5s ease-in-out forwards;
     
     transform: translate(-100%, 0); */
@@ -270,6 +313,7 @@ ul{
     font-size: 1.6rem;
     padding-bottom: 2rem;
     font-weight: 300;
+    
 }
 .cards{
     padding-top: 2rem;
@@ -281,19 +325,22 @@ ul{
     width: 20%;
     text-align: center;
     height: 150px;
-    /* background-color: black; */
-    box-shadow: 7px 7px 10px 10px rgba(0, 0, 0, 0.119);
-    color: black;
+    background-color: var(--background-box);
+    box-shadow: 5px 5px 10px 1px var(--shadow);
+    border: 2px dotted var(--color-body);
+    border-radius: 10px;
+    
 }
-.card p:first-of-type{
-    margin-top: 3rem;
-    text-align: left;
-    padding-left: 2rem;
+.card-para1{
+    padding-top: 1.2rem;
+    zoom: 1.8;
+    color: var(--color-text);
 }
 .card .tag{
     margin-top: 30%;
     font-size: 2rem;
     text-transform: capitalize;
+    color: var(--color-text);
 }
 
 
@@ -383,7 +430,7 @@ ul{
 }
 
 .edu-info{
-    border: 1px solid rgba(0, 0, 0, 0.29);
+    border: 1px solid var(--color-text);
     margin: 0.5rem 0.5rem;
     display: none;
     transition: all 0.4s ease-in-out;
@@ -426,11 +473,12 @@ ul{
     margin-left: 5rem;
     height: 25rem;
     /* width: 80%; */
-    border: 1px solid black;
-    background: rgb(231, 229, 227);
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.157);
+    border: 2px solid var(--color-body);
+    background: var(--background-box);
+    box-shadow: 10px 10px 15px var(--shadow);
     padding: 3rem;
-    
+    color: var(--color-text);
+    border-radius: 20px;
 }
 .experience .experience-para{
     font-size: 2.5rem;
@@ -449,8 +497,6 @@ ul{
 }
 .experience-joiner{
     height: 5rem;
-    border-left: 5px solid rgba(0, 0, 0, 0.400);
-    border-radius: 5px solid rgba(0, 0, 0, 0.400);
     margin-top: 1rem;
     margin-left: 51%;
     
@@ -462,6 +508,8 @@ ul{
     height: 5rem;
     width: 100%;
     text-align: center;
+    margin-left: 1rem;
+    zoom: 2;
 }
 
 .coming-more{
@@ -471,7 +519,7 @@ ul{
 }
 
 .coming-more .coming{
-    border: 1px solid black;
+    border: 1px solid var(--color-text);
     width: 30%;
     position: relative;
     top: 0%;
@@ -530,9 +578,9 @@ ul{
 }
 
 .box{
-    border: 2px solid black;
+    border: 2px solid var(--color-body);
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('./img/home2.jpg');
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('./img/home1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -540,7 +588,7 @@ ul{
     text-align: center;
     height: 100%;
     position: relative;
-    
+    border-radius: 20px;
 }
 .box1{
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('./img/home1.jpg');
@@ -558,6 +606,7 @@ ul{
     z-index: 0;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    
 }
 /* .left-box-text{
     left: -100%;
@@ -576,7 +625,7 @@ ul{
     opacity: 1;
 } */
 .box-text{
-    top: -50%;
+    top: -10%;
 }
 .box:hover .box-text{
     top: 0%;
@@ -604,9 +653,9 @@ ul{
     border-radius: 10px;
 }
 .project-buttons button:hover{
-    background: black;
-    color: white;
-    border: 2px solid white;
+    background: white;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
 }
 .box .know-more{
     width: 70%;
@@ -615,8 +664,8 @@ ul{
     margin-bottom: 2rem;
     font-size: 2rem;
     /* margin-left: 15%; */
-    background: black;
-    color: white;
+    background: var(--color-text);
+    color: var(--color-body);
     outline: none;
     border: 2px solid white;
     border-radius: 10px;
@@ -624,11 +673,11 @@ ul{
 }
 .box .know-more:hover{
     background: red;
-    color: white;
+    color: var(--color-text);
     border-radius: 10px;
 }
 .box::after{
-    content: "hello";
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -638,7 +687,7 @@ ul{
     background: rgba(0, 0, 0, 0.489);
     opacity: 0;
     z-index: 1;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .box:hover::after{
     background-color: rgba(0, 0, 0, 0.803);
@@ -656,7 +705,7 @@ ul{
     font-size: 2rem;
     line-height: 3rem;
     padding: 3rem 1rem 2rem 1rem;
-    color: wheat;
+    color: white;
 }
 
 
@@ -680,63 +729,39 @@ ul{
     letter-spacing: 0.6rem;
     padding-bottom: 8rem;
 }
-.contact{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.contact ul{
-    width: 45%;
-}
-.contact ul p{
-    display: inline-block;
-}
-.contact .icon{
-    padding: 3rem;
-    font-size: 10rem;
-    /* margin-right: 3rem; */
-    width: 90%;
-    height: 90%;
+.contact .first-ul{
     text-align: center;
+}
+.first-ul li{
+    height: 10rem;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    border: 2px solid var(--color-text);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
 }
 .icon i{
-    font-size: 4rem;
-    background: white;
-    /* background-color: blue; */
-    transition: all 0.3s ease-in-out;
-    
+    zoom: 2.5;
+    padding-bottom: 1rem;
+    transition: all 0.1s ease-in-out;
 }
-.contact li p{
-    display: inline-block;
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    color: black;
-    transition: all 0.3s ease-in-out;
+.first-ul a{
+    transition: all 0.2s ease-in-out;
 }
-.contact ul li{
-    padding-bottom: 2rem;
-    padding-top: -1rem;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
+.first-ul li:hover,
+.first-ul li:hover a{
+    background: var(--color-text);
+    color: var(--color-body);
 }
-.contact .first-ul{
-    border-right: 2px solid black;
-    width: 50%;
+.contact-links{
+    color: var(--color-text);
 }
-.contact ul li:hover{
-    background-color: black;
-    color: white;
-    border-radius: 5rem;
-    
-}
-.contact ul li:hover i{
-    color: white;
-    background: black;
-}
-.contact ul li:hover p{
-    color: white;
-}
+
 
 
 
@@ -810,9 +835,7 @@ ul{
         margin-left: 0%;
         width: 100%;
     }
-    .contact ul li{
-        text-align: center;
-    }
+    
     
     
     
@@ -825,13 +848,16 @@ ul{
         width: 40%;
     }
 
+    .toggle-theme{
+        left: 80%;
+    }
     
     .container input[type="checkbox"]{
         position: absolute;
         z-index: 999;
         top: 10px;
         left: 4px;
-        background: black;
+        background: var(--color-text);
         zoom: 2.8;
         opacity: 0;
     }
@@ -868,9 +894,13 @@ ul{
     .hamburger-lines .line{
         height: 5px;
         width: 100%;
-        background: black;
+        background: var(--color-text);
         margin-bottom: 10px;
         transition: all 0.3s ease-in-out;
+    }
+    .sidebar-container{
+        height: 7rem;
+        width: 5rem;
     }
 
 
@@ -885,9 +915,6 @@ ul{
     .main-content{
         margin-left: 0%;
         width: 90%;
-    }
-    .contact ul li{
-        text-align: center;
     }
     .cards{
         display: block;
@@ -929,12 +956,6 @@ ul{
     }
 
 
-    .contact ul li p{
-        font-size: 1.3rem;
-    }
-    .contact ul li{
-        height: 20rem;
-    }
     
 
     /* **************hamburger menu for side bar ****************** */
@@ -952,7 +973,7 @@ ul{
         z-index: 999;
         top: 10px;
         left: 4px;
-        background: black;
+        background: var(--color-text);
         zoom: 2.8;
         opacity: 0;
     }
@@ -989,7 +1010,7 @@ ul{
     .hamburger-lines .line{
         height: 5px;
         width: 100%;
-        background: black;
+        background: var(--color-text);
         margin-bottom: 10px;
         transition: all 0.3s ease-in-out;
     }
@@ -1013,9 +1034,7 @@ ul{
         margin-left: 0%;
         width: 90%;
     }
-    .contact ul li{
-        text-align: center;
-    }
+    
     .cards{
         display: block;
         width: 100%;
@@ -1054,22 +1073,6 @@ ul{
     }
 
 
-    .contact{
-        display: block;
-    }
-    .contact ul{
-        width: 100%;
-    }
-    .contact .first-ul{
-        width: 100%;
-        border: none;
-    }
-    .contact ul li p{
-        font-size: 2rem;
-    }
-    .contact ul li{
-        height: 20rem;
-    }
 
 
     .education-title-btn p:first-of-type{
@@ -1102,7 +1105,7 @@ ul{
         z-index: 999;
         top: 10px;
         left: 4px;
-        background: black;
+        background: var(--color-text);
         zoom: 2.8;
         opacity: 0;
     }
@@ -1140,7 +1143,7 @@ ul{
     .hamburger-lines .line{
         height: 5px;
         width: 100%;
-        background: black;
+        background: var(--color-text);
         margin-bottom: 10px;
         transition: all 0.3s ease-in-out;
     }
@@ -1162,9 +1165,7 @@ ul{
         margin-left: 0%;
         width: 90%;
     }
-    .contact ul li{
-        text-align: center;
-    }
+    
     .cards{
         display: block;
         width: 100%;
@@ -1203,22 +1204,6 @@ ul{
     }
 
 
-    .contact{
-        display: block;
-    }
-    .contact ul{
-        width: 100%;
-    }
-    .contact .first-ul{
-        width: 100%;
-        border: none;
-    }
-    .contact ul li p{
-        font-size: 2rem;
-    }
-    .contact ul li{
-        height: 20rem;
-    }
 
 
     .education-title-btn p:first-of-type{
@@ -1261,7 +1246,7 @@ ul{
         z-index: 999;
         top: 10px;
         left: 4px;
-        background: black;
+        background: var(--color-text);
         zoom: 2.8;
         opacity: 0;
     }
@@ -1299,7 +1284,7 @@ ul{
     .hamburger-lines .line{
         height: 5px;
         width: 100%;
-        background: black;
+        background: var(--color-text);
         margin-bottom: 10px;
         transition: all 0.3s ease-in-out;
     }

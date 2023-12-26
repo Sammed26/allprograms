@@ -188,3 +188,22 @@ info4_btn.addEventListener("mouseout", ()=>{
 
 
 
+
+
+// ===================== for dark mode =================
+
+const body = document.body;
+const toggle_btn = document.querySelector(".toggle-theme");
+toggle_btn.addEventListener("click", ()=>{
+    if(body.classList.contains("dark-mode")){
+        body.classList.remove("dark-mode");
+        toggle_btn.textContent = "Dark Mode";
+    }
+    else{
+        body.classList.add("dark-mode");
+        toggle_btn.textContent = "Light Mode";
+    }
+})
+
+
+
