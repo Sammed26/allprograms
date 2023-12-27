@@ -48,8 +48,8 @@ ul{
 
 .toggle-theme{
     position: fixed;
-    width: 10rem;
-    height: 4rem;
+    width: 12rem;
+    height: 5rem;
     font-size: 1.6rem;
     font-weight: 600;
     background: var(--color-text);
@@ -58,8 +58,8 @@ ul{
     margin-bottom: 2rem;
     transition: all 0.2s ease-in-out;
     border-radius: 10px;
-    top: 1rem;
-    left: 90%;
+    top: 2rem;
+    right: 3%;
     z-index: 999;
 }
 .toggle-theme:hover{
@@ -108,7 +108,7 @@ ul{
     left: 1rem;
     z-index: 999;
     background: var(--color-body);
-    opacity: 0.9;
+    opacity: 1;
     color: var(--color-text);
     padding-bottom: 5rem;
 }
@@ -177,7 +177,7 @@ ul{
 
 .home{
     background: url('./img/home1.jpg');
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     height: 95vh;
@@ -269,6 +269,9 @@ ul{
     background: var(--color-body);
     color: var(--color-text);
 }
+.intro-btn:hover a{
+    color: white;
+}
 
 
 
@@ -340,6 +343,8 @@ ul{
 .card-para1 img{
     height: 3rem;
     width: 3rem;
+    background: white;
+    border-radius: 10px;
 }
 .card .tag{
     
@@ -598,7 +603,13 @@ ul{
     border-radius: 20px;
 }
 .box1{
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('./img/home1.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('./img/travel.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.box2{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('./img/food.png');
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -653,7 +664,7 @@ ul{
     font-weight: 500;
     cursor: pointer;
     background: red;
-    color: white;
+    color: var(--color-body);
     outline: none;
     border: none;
     transition: all 0.3s ease-in-out;
@@ -661,7 +672,7 @@ ul{
 }
 .project-buttons button:hover{
     background: white;
-    color: var(--color-text);
+    color: black;
     border: 2px solid var(--color-text);
 }
 .box .know-more{
@@ -694,6 +705,7 @@ ul{
     background: rgba(0, 0, 0, 0.489);
     opacity: 0;
     z-index: 1;
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
 .box:hover::after{
@@ -870,7 +882,9 @@ ul{
     }
     input[type="checkbox"]:checked ~ .sidebar{
         transform: translate(0);
-    }    
+
+    }   
+    
     .sidebar-container .hamburger-lines{
         position: absolute;
         height: 35px;
@@ -908,6 +922,7 @@ ul{
     .sidebar-container{
         height: 7rem;
         width: 5rem;
+        
     }
 
 
@@ -1086,7 +1101,7 @@ ul{
 
 
     .education-title-btn p:first-of-type{
-        font-size: 1px;
+        font-size: 1.5rem;
     }
     .experience{
         height: 30rem;
@@ -1127,8 +1142,8 @@ ul{
         height: 35px;
         width: 35px;
         z-index: 5;
-        top: 30px;
-        left: 10px;
+        /* top: 30px;
+        left: 10px; */
         transition: all 0.3s ease-in-out;
         /* border-left: 4px solid black; */
         
@@ -1157,7 +1172,14 @@ ul{
         margin-bottom: 10px;
         transition: all 0.3s ease-in-out;
     }
-    
+    .sidebar-container{
+        padding-top: 10px;
+        top: 30px;
+        left: 10px;
+        width: 50px;
+        height: 55px;
+    }
+
 
 }
 
@@ -1247,7 +1269,7 @@ ul{
         transform: translate(-130%);
         z-index: 3;
         transition: all 0.3s ease-in-out;
-        padding-top: 10rem;
+        padding-top: 5rem;
         width: 40%;
     }
 
@@ -1270,8 +1292,8 @@ ul{
         height: 35px;
         width: 35px;
         z-index: 5;
-        top: 30px;
-        left: 10px;
+        top: 5px;
+        /* left: 10px;  */
         transition: all 0.3s ease-in-out;
         /* border-left: 4px solid black; */
         
@@ -1298,6 +1320,16 @@ ul{
         background: var(--color-text);
         margin-bottom: 10px;
         transition: all 0.3s ease-in-out;
+    }
+
+    .sidebar-container{
+        height: 50px;
+        width: 50px;
+    }
+
+    .theme{
+        width: 50%;
+        padding-right: 2rem;   
     }
 
 }
