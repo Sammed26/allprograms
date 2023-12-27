@@ -329,19 +329,26 @@ ul{
     box-shadow: 5px 5px 10px 1px var(--shadow);
     border: 2px dotted var(--color-body);
     border-radius: 10px;
-    
+    padding-bottom: 3rem;
 }
 .card-para1{
-    padding-top: 1.2rem;
+    padding-top: 0.8rem;
     zoom: 1.8;
     color: var(--color-text);
+    
+}
+.card-para1 img{
+    height: 3rem;
+    width: 3rem;
 }
 .card .tag{
-    margin-top: 30%;
+    
+    margin-top: 5%;
     font-size: 2rem;
     text-transform: capitalize;
     color: var(--color-text);
 }
+
 
 
 
@@ -920,11 +927,13 @@ ul{
         display: block;
         width: 100%;
         text-align: center;
+        
     }
     .card{
         width: 50%;
         margin-left: 25%;
         text-align: center;
+        margin-bottom: 2rem;
     }
     .experience-content .outer-div{
         margin-left: -15%;
@@ -1044,6 +1053,7 @@ ul{
         width: 50%;
         margin-left: 25%;
         text-align: center;
+        margin-bottom: 2rem;
     }
     .experience-content .outer-div{
         margin-left: -15%;
@@ -1175,6 +1185,7 @@ ul{
         width: 50%;
         margin-left: 25%;
         text-align: center;
+        margin-bottom: 2rem;
     }
     .experience-content .outer-div{
         margin-left: -15%;
