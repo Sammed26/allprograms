@@ -31,7 +31,7 @@ function calculateAccuracy()
         let word_from_what_typed = what_typed_para_array[i];
         let word_from_para_to_type = para_to_type_array[i];
 
-        for(let j = 0; j<word_from_para_to_type.length; j++)
+        for(let j = 0; j<para_to_type_array[i].length; j++)
         {
             if(word_from_para_to_type[j] != word_from_what_typed[j])
             {
@@ -56,18 +56,36 @@ function cheakScore(){
     // console.log("error = " + error);
 
 
-    let accuracy = ((((para_to_type_array.length)-error)/para_to_type_array.length))*100;
+    let accuracy = Math.round(((((para_to_type_array.length)-error)/para_to_type_array.length))*100).toFixed(2);
 
 
 
-    console.log(accuracy);
+    // console.log(accuracy);
     const results = document.querySelector(".results");
     results.style.opacity = "1";
     const accu = document.querySelector(".accuracy");
-    console.log(accu);
+    // console.log(accu);
     accu.textContent = `Accuracy = ${accuracy}`;
     accu.style.display = "block";
 
+    const btn = document.querySelector(".results-show-hide-btn");
+    // console.log(btn);
+    btn.style.display = "block";
+
+    btn.addEventListener("click", ()=>{
+        if(btn.textContent === "Hide")
+        {
+            btn.textContent = "Show";
+            btn.style.top = "95%";
+            results.style.opacity = "0";
+        }
+        else
+        {
+            btn.textContent = "Hide";
+            btn.style.top = "18%";
+            results.style.opacity = "1";
+        }
+    })
 
     // console.log("startTime = " + startTime);
     // console.log("endTime = " + endTime);
@@ -76,7 +94,7 @@ function cheakScore(){
 
     let total_time_in_min = ((endTime - startTime)/(1000*60));
     
-    // console.log(total_time_in_min);
+    console.log(total_time_in_min);
 
 
 
@@ -85,7 +103,7 @@ function cheakScore(){
     let speed = Math.round(what_typed_para_array.length/ total_time_in_min);
 
     wpm.textContent = `WPM = ${speed}`;
-    console.log("WPM = " + Math.round(what_typed_para_array.length/ total_time_in_min));
+    // console.log("WPM = " + Math.round(what_typed_para_array.length/ total_time_in_min));
 
 }
 
@@ -106,7 +124,7 @@ function keydownfunc(e){
         cheakScore();
 
     }
-    if(/^[a-zA-Z0-9 ]$/.test(e.key) || e.key === "Backspace")
+    if(/^[a-zA-Z0-9 (),.'"]$/.test(e.key) || e.key === "Backspace")
     {
         if(e.key === "Backspace")
         {
@@ -130,6 +148,9 @@ function keydownfunc(e){
 
     document.addEventListener("keydown", keydownfunc);
    
+
+
+
 
 
 
