@@ -10,6 +10,7 @@
 
 html{
     font-size: 12px;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -29,7 +30,7 @@ ul{
 :root{
     --color-body: hsl(0, 50%, 96%);
     --color-text: hsl(0, 0%, 0%);
-    --shadow: hsla(0, 0%, 2%, 0.325); 
+    --shadow: hsla(0, 0%, 2%, 0.354); 
     --background-box: rgba(228, 226, 226, 0.867);
     --sidebar-background: rgb(222, 222, 222);
     transition: all 0.4s ease-in-out;
@@ -40,9 +41,9 @@ ul{
 .dark-mode{
     --color-body: hsl(0, 0%, 0%);
     --color-text: hsl(0, 50%, 96%);
-    --shadow: hsl(0, 39%, 93%);
+    --shadow: hsla(0, 39%, 93%, 0.553);
     --background-box: rgba(75, 72, 72, 0.867);
-    --sidebar-background: rgba(222, 222, 222, 0.212);
+    --sidebar-background: rgba(0, 0, 0);
     transition: all 0.4s ease-in-out;
 }
 
@@ -58,15 +59,14 @@ ul{
     margin-bottom: 2rem;
     transition: all 0.2s ease-in-out;
     border-radius: 10px;
-    top: 2rem;
-    right: 3%;
+    top: 1rem;
+    right: 2px;
     z-index: 999;
 }
 .toggle-theme:hover{
     color: var(--color-text);
     background: var(--color-body);
 }
-
 
 
 
@@ -98,7 +98,6 @@ ul{
     background: var(--sidebar-background);
     opacity: 1;
     
-
 }
 .sidebar-container{
     position: fixed;
@@ -107,7 +106,7 @@ ul{
     top: 1rem;
     left: 1rem;
     z-index: 999;
-    background: var(--color-body);
+    /* background: var(--color-body); */
     opacity: 1;
     color: var(--color-text);
     padding-bottom: 5rem;
@@ -168,7 +167,7 @@ ul{
     /* border: 3px solid black; */
     width: 75%;
     margin-left: 25%;
-    padding-top: 5rem;
+    padding-top: 9rem;
     color: var(--color-text);
 }
 
@@ -197,6 +196,8 @@ ul{
     transform: translate(0, 150%);
     animation: intro 1s ease-out forwards;
     transition: all 0.7s ease-in-out;
+    
+
 }
 @keyframes intro {
     0%{
@@ -580,6 +581,7 @@ ul{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 0.6rem;
     padding-bottom: 8rem;
+    
 }
 .project-boxes{
     display: grid;
@@ -590,7 +592,7 @@ ul{
 }
 
 .box{
-    border: 2px solid var(--color-body);
+    border: 1px solid var(--color-text);
     width: 100%;
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('./img/home1.jpg');
     background-position: center;
@@ -601,6 +603,7 @@ ul{
     height: 100%;
     position: relative;
     border-radius: 20px;
+    box-shadow: 3px 3px 10px 3px var(--shadow);
 }
 .box1{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('./img/travel.png');
@@ -705,7 +708,7 @@ ul{
     background: rgba(0, 0, 0, 0.489);
     opacity: 0;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
 }
 .box:hover::after{
@@ -810,6 +813,9 @@ ul{
     input[type="checkbox"]{
         display: none;
     }
+    .main-content{
+        padding-top: 5rem;
+    }
 
 
  }
@@ -831,6 +837,9 @@ ul{
     }
     input[type="checkbox"]{
         display: none;
+    }
+    .main-content{
+        padding-top: 5rem;
     }
     
 }
@@ -860,7 +869,7 @@ ul{
     
     /* **************hamburger menu for side bar ****************** */
     .sidebar{
-        transform: translate(-130%);
+        transform: translate(-120%);
         z-index: 3;
         transition: all 0.3s ease-in-out;
         padding-top: 1rem;
@@ -874,14 +883,14 @@ ul{
     .container input[type="checkbox"]{
         position: absolute;
         z-index: 999;
-        top: 10px;
-        left: 4px;
+        /* top: 5px;
+        left: 2px; */
         background: var(--color-text);
         zoom: 2.8;
         opacity: 0;
     }
     input[type="checkbox"]:checked ~ .sidebar{
-        transform: translate(0);
+        transform: translate(-5%, -5%);
 
     }   
     
@@ -890,8 +899,8 @@ ul{
         height: 35px;
         width: 35px;
         z-index: 5;
-        top: 30px;
-        left: 10px;
+        /* top: 15px;
+        left: 5px; */
         transition: all 0.3s ease-in-out;
         /* border-left: 4px solid black; */
         
@@ -924,12 +933,19 @@ ul{
         width: 5rem;
         
     }
+    .home{
+        margin-left: 2rem;
+    }
+
+    
 
 
 }
+
+
 @media (min-width: 510px) and (max-width: 768px) {
     html{
-        font-size: 9px;
+        font-size: 8px;
     }
     .sidebar img{
         margin-top: 6rem;
@@ -948,7 +964,7 @@ ul{
         width: 50%;
         margin-left: 25%;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     .experience-content .outer-div{
         margin-left: -15%;
@@ -975,7 +991,7 @@ ul{
         width: 100%;
         text-align: center;
         margin-bottom: 3rem;
-        border-radius: 5px;
+        border-radius: 10px;
         height: 100%;
     }
 
@@ -995,8 +1011,8 @@ ul{
     .container input[type="checkbox"]{
         position: absolute;
         z-index: 999;
-        top: 10px;
-        left: 4px;
+        /* top: 1px; */
+        /* left: 2px; */
         background: var(--color-text);
         zoom: 2.8;
         opacity: 0;
@@ -1009,8 +1025,8 @@ ul{
         height: 35px;
         width: 35px;
         z-index: 5;
-        top: 30px;
-        left: 10px;
+        /* top: 1px;
+        left: 1px; */
         transition: all 0.3s ease-in-out;
         /* border-left: 4px solid black; */
         
@@ -1039,6 +1055,10 @@ ul{
         transition: all 0.3s ease-in-out;
     }
 
+    .home{
+        margin-left: 4rem;
+    }
+
 
 }
 
@@ -1049,7 +1069,7 @@ ul{
 @media (min-width: 320px) and (max-width: 509px) 
 {
     html{
-        font-size: 5px;
+        font-size: 7px;
     }  
     .sidebar img{
         margin-top: 6rem;
@@ -1063,12 +1083,15 @@ ul{
         display: block;
         width: 100%;
         text-align: center;
+        padding-top: 2rem;
     }
     .card{
-        width: 50%;
+        width: 40%;
+        height: 20rem;
         margin-left: 25%;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
+        padding-top: 2rem;
     }
     .experience-content .outer-div{
         margin-left: -15%;
@@ -1079,7 +1102,7 @@ ul{
 
     .projects-content{
         display: block;
-        margin-left: -3rem;
+       
     }
     .project-boxes{
         display: block;
@@ -1090,11 +1113,14 @@ ul{
         text-align: center;
     }
     .box{
-        width: 100%;
+        width: 90%;
         text-align: center;
-        margin-bottom: 3rem;
-        border-radius: 5px;
+        margin-bottom: 5rem;
+        border-radius: 10px;
+        /* margin-left: 5%; */
         height: 40rem;
+        /* border: 0.5px solid var(--color-text); */
+        box-shadow: 5px 5px 5px 5px var(--shadow);
     }
 
 
@@ -1109,6 +1135,7 @@ ul{
     
     .home{
         height: 60vh;
+        margin-left: 6rem;
     }
     
     .main-content{
@@ -1120,22 +1147,23 @@ ul{
         transform: translate(-130%);
         z-index: 3;
         transition: all 0.3s ease-in-out;
-        padding-top: 10rem;
         width: 40%;
+        padding-top: 2rem;
     }
 
     
     .container input[type="checkbox"]{
         position: absolute;
         z-index: 999;
-        top: 10px;
-        left: 4px;
+        /* top: 10px;
+        left: 4px; */
         background: var(--color-text);
         zoom: 2.8;
         opacity: 0;
+        margin-top: 0.8rem;
     }
     input[type="checkbox"]:checked ~ .sidebar{
-        transform: translate(0);
+        transform: translate(-5%, 0%);
     }    
     .sidebar-container .hamburger-lines{
         position: absolute;
@@ -1146,7 +1174,7 @@ ul{
         left: 10px; */
         transition: all 0.3s ease-in-out;
         /* border-left: 4px solid black; */
-        
+        padding-top: 2rem;
         
     }
     
@@ -1173,11 +1201,13 @@ ul{
         transition: all 0.3s ease-in-out;
     }
     .sidebar-container{
-        padding-top: 10px;
-        top: 30px;
-        left: 10px;
+        /* padding-top: 20px; */
+        /* top: 30px;
+        left: 10px; */
         width: 50px;
         height: 55px;
+        padding-left: 2rem;
+        
     }
 
 
@@ -1248,6 +1278,7 @@ ul{
     
     .home{
         height: 60vh;
+        margin-left: 5.5rem;
     }
     
     .main-content{

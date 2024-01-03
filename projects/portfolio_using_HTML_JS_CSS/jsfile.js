@@ -63,7 +63,7 @@ info1_btn.addEventListener("click", ()=>{
 })
 const btn1_text = document.querySelector(".degree-title1");
 info1_btn.addEventListener("mouseover", ()=>{
-    info1_btn.style.width = "110%";
+    info1_btn.style.width = "105%";
     info1_btn.style.height = "7rem";
     info1_btn_sign.style.fontSize = "5rem";
     btn1_text.style.fontSize = "2rem";
