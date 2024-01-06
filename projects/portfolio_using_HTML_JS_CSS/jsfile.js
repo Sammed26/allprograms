@@ -44,23 +44,23 @@ const info1_btn = document.getElementById("info1-btn");
 const info1 = document.getElementById("info1");
 // console.log(info1);
 const info1_btn_sign = document.querySelector(".sign1");
-info1_btn.addEventListener("click", ()=>{
-    if(current_visibility === 0)
-    {
-        info1.style.display = "block";
-        info1_btn_sign.textContent = "-";
-        current_visibility = 1;
-        info1_btn.style.background = "rgb(156, 93, 215)";
-        info1_btn.style.color = "white";
-    }
-    else{
-        info1.style.display = "none";
-        info1_btn_sign.textContent = "+";
-        current_visibility = 0;
-        info1_btn.style.background = "rgb(231, 229, 227)";
-        info1_btn.style.color = "black";
-    }
-})
+// info1_btn.addEventListener("click", ()=>{
+//     if(current_visibility === 0)
+//     {
+//         info1.style.display = "block";
+//         info1_btn_sign.textContent = "-";
+//         current_visibility = 1;
+//         info1_btn.style.background = "rgb(156, 93, 215)";
+//         info1_btn.style.color = "white";
+//     }
+//     else{
+//         info1.style.display = "none";
+//         info1_btn_sign.textContent = "+";
+//         current_visibility = 0;
+//         info1_btn.style.background = "rgb(231, 229, 227)";
+//         info1_btn.style.color = "black";
+//     }
+// })
 const btn1_text = document.querySelector(".degree-title1");
 info1_btn.addEventListener("mouseover", ()=>{
     info1_btn.style.width = "105%";
@@ -81,23 +81,23 @@ info1_btn.addEventListener("mouseout", ()=>{
 const info2_btn = document.getElementById("info2-btn");
 const info2 = document.getElementById("info2");
 const info2_btn_sign = document.querySelector(".sign2");
-info2_btn.addEventListener("click", ()=>{
-    if(current_visibility === 0)
-    {
-        info2.style.display = "block";
-        info2_btn_sign.textContent = "-";
-        current_visibility = 1;
-        info2_btn.style.background = "rgb(156, 93, 215)";
-        info2_btn.style.color = "white";
-    }
-    else{
-        info2.style.display = "none";
-        info2_btn_sign.textContent = "+";
-        current_visibility = 0;
-        info2_btn.style.background = "rgb(231, 229, 227)";
-        info2_btn.style.color = "black";
-    }
-})
+// info2_btn.addEventListener("click", ()=>{
+//     if(current_visibility === 0)
+//     {
+//         info2.style.display = "block";
+//         info2_btn_sign.textContent = "-";
+//         current_visibility = 1;
+//         info2_btn.style.background = "rgb(156, 93, 215)";
+//         info2_btn.style.color = "white";
+//     }
+//     else{
+//         info2.style.display = "none";
+//         info2_btn_sign.textContent = "+";
+//         current_visibility = 0;
+//         info2_btn.style.background = "rgb(231, 229, 227)";
+//         info2_btn.style.color = "black";
+//     }
+// })
 const btn2_text = document.querySelector(".degree-title2");
 info2_btn.addEventListener("mouseover", ()=>{
     info2_btn.style.width = "110%";
@@ -116,23 +116,23 @@ info2_btn.addEventListener("mouseout", ()=>{
 const info3_btn = document.getElementById("info3-btn");
 const info3 = document.getElementById("info3");
 const info3_btn_sign = document.querySelector(".sign3");
-info3_btn.addEventListener("click", ()=>{
-    if(current_visibility === 0)
-    {
-        info3.style.display = "block";
-        info3_btn_sign.textContent = "-";
-        current_visibility = 1;
-        info3_btn.style.background = "rgb(156, 93, 215)";
-        info3_btn.style.color = "white";
-    }
-    else{
-        info3.style.display = "none";
-        info3_btn_sign.textContent = "+";
-        current_visibility = 0;
-        info3_btn.style.background = "rgb(231, 229, 227)";
-        info3_btn.style.color = "black";
-    }
-})
+// info3_btn.addEventListener("click", ()=>{
+//     if(current_visibility === 0)
+//     {
+//         info3.style.display = "block";
+//         info3_btn_sign.textContent = "-";
+//         current_visibility = 1;
+//         info3_btn.style.background = "rgb(156, 93, 215)";
+//         info3_btn.style.color = "white";
+//     }
+//     else{
+//         info3.style.display = "none";
+//         info3_btn_sign.textContent = "+";
+//         current_visibility = 0;
+//         info3_btn.style.background = "rgb(231, 229, 227)";
+//         info3_btn.style.color = "black";
+//     }
+// })
 const btn3_text = document.querySelector(".degree-title3");
 info3_btn.addEventListener("mouseover", ()=>{
     info3_btn.style.width = "110%";
@@ -152,24 +152,24 @@ info3_btn.addEventListener("mouseout", ()=>{
 const info4_btn = document.getElementById("info4-btn");
 const info4 = document.getElementById("info4");
 const info4_btn_sign = document.querySelector(".sign4");
-info4_btn.addEventListener("click", ()=>{
-    if(current_visibility === 0)
-    {
-        info4.style.display = "block";
-        info4_btn_sign.textContent = "-";
-        current_visibility = 1;
-        info4_btn.style.background = "rgb(156, 93, 215)";
-        info4_btn.style.color = "white";
-    }
-    else{
-        info4.style.display = "none";
-        info4_btn_sign.textContent = "+";
-        current_visibility = 0;
-        info4_btn.style.background = "rgb(231, 229, 227)";
-        info4_btn.style.color = "black";
+// info4_btn.addEventListener("click", ()=>{
+//     if(current_visibility === 0)
+//     {
+//         info4.style.display = "block";
+//         info4_btn_sign.textContent = "-";
+//         current_visibility = 1;
+//         info4_btn.style.background = "rgb(156, 93, 215)";
+//         info4_btn.style.color = "white";
+//     }
+//     else{
+//         info4.style.display = "none";
+//         info4_btn_sign.textContent = "+";
+//         current_visibility = 0;
+//         info4_btn.style.background = "rgb(231, 229, 227)";
+//         info4_btn.style.color = "black";
         
-    }
-})
+//     }
+// })
 const btn4_text = document.querySelector(".degree-title4");
 info4_btn.addEventListener("mouseover", ()=>{
     info4_btn.style.width = "110%";
@@ -204,6 +204,99 @@ toggle_btn.addEventListener("click", ()=>{
         toggle_btn.textContent = "Light Mode";
     }
 })
+
+
+
+
+
+
+
+
+
+// ========================== jqery code ===================
+
+
+// for education detail to hide or show
+
+$(document).ready(function(){
+    $("#info1-btn").click(function(){
+        if($(this).hasClass("hide"))
+        {
+            $(this).removeClass('hide');
+            $("#info1").show(800);
+            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
+            $(".sign1").text("-");
+        }
+        else
+        {
+            $(this).addClass('hide');
+            $("#info1").hide(800);
+            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
+            $(".sign1").text("+");
+        }
+
+    });
+});
+
+$(document).ready(function(){
+    $("#info2-btn").click(function(){
+        if($(this).hasClass("hide"))
+        {
+            $(this).removeClass('hide');
+            $("#info2").show(800);
+            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
+            $(".sign2").text("-");
+        }
+        else
+        {
+            $(this).addClass('hide');
+            $("#info2").hide(800);
+            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
+            $(".sign2").text("+");
+        }
+
+
+    });
+});
+$(document).ready(function(){
+    $("#info3-btn").click(function(){
+        if($(this).hasClass("hide"))
+        {
+            $(this).removeClass('hide');
+            $("#info3").show(800);
+            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
+            $(".sign3").text("-");
+        }
+        else
+        {
+            $(this).addClass('hide');
+            $("#info3").hide(800);
+            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
+            $(".sign3").text("+");
+        }
+
+
+    });
+});
+$(document).ready(function(){
+    $("#info4-btn").click(function(){
+        if($(this).hasClass("hide"))
+        {
+            $(this).removeClass('hide');
+            $("#info4").show(800);
+            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
+            $(".sign4").text("-");
+        }
+        else
+        {
+            $(this).addClass('hide');
+            $("#info4").hide(800);
+            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
+            $(".sign4").text("+");
+        }
+
+    });
+});
 
 
 

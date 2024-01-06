@@ -443,10 +443,10 @@ ul{
 }
 
 .edu-info{
-    border: 1px solid var(--color-text);
-    margin: 0.5rem 0.5rem;
+    border: 2px solid var(--color-text);
+    margin: 0.5rem 1rem;
     display: none;
-    transition: all 0.4s ease-in-out;
+    /* transition: all 0.4s ease-in-out; */
     
 }
 
@@ -462,6 +462,7 @@ ul{
     padding-right: 2rem;
     font-size: 3rem;
 }
+
 
 
 
