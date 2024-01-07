@@ -462,6 +462,12 @@ ul{
     padding-right: 2rem;
     font-size: 3rem;
 }
+.effectAfterOpened{
+    background: rgb(156, 93, 215);
+    color: white;
+}
+
+
 
 
 

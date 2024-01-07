@@ -218,85 +218,29 @@ toggle_btn.addEventListener("click", ()=>{
 
 // for education detail to hide or show
 
+
+
 $(document).ready(function(){
-    $("#info1-btn").click(function(){
-        if($(this).hasClass("hide"))
+    $(".education-title-btn").click(function(){
+        $(this).next(".edu-info").toggle(500);
+
+        $(this).toggleClass("effectAfterOpened");
+
+        if($(this).children("p.sign").text() == "+")
         {
-            $(this).removeClass('hide');
-            $("#info1").show(800);
-            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
-            $(".sign1").text("-");
+            $(this).children("p.sign").text("-");
         }
         else
         {
-            $(this).addClass('hide');
-            $("#info1").hide(800);
-            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
-            $(".sign1").text("+");
-        }
-
-    });
-});
-
-$(document).ready(function(){
-    $("#info2-btn").click(function(){
-        if($(this).hasClass("hide"))
-        {
-            $(this).removeClass('hide');
-            $("#info2").show(800);
-            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
-            $(".sign2").text("-");
-        }
-        else
-        {
-            $(this).addClass('hide');
-            $("#info2").hide(800);
-            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
-            $(".sign2").text("+");
+            $(this).children("p.sign").text("+");
         }
 
 
-    });
-});
-$(document).ready(function(){
-    $("#info3-btn").click(function(){
-        if($(this).hasClass("hide"))
-        {
-            $(this).removeClass('hide');
-            $("#info3").show(800);
-            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
-            $(".sign3").text("-");
-        }
-        else
-        {
-            $(this).addClass('hide');
-            $("#info3").hide(800);
-            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
-            $(".sign3").text("+");
-        }
+    })
+})
 
 
-    });
-});
-$(document).ready(function(){
-    $("#info4-btn").click(function(){
-        if($(this).hasClass("hide"))
-        {
-            $(this).removeClass('hide');
-            $("#info4").show(800);
-            $(this).css({"background":"rgb(156, 93, 215)", "color":"white"});
-            $(".sign4").text("-");
-        }
-        else
-        {
-            $(this).addClass('hide');
-            $("#info4").hide(800);
-            $(this).css({"background":"rgb(231, 229, 227)", "color":"black"});
-            $(".sign4").text("+");
-        }
 
-    });
-});
 
 
 
