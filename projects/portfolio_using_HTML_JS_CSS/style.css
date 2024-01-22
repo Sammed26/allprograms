@@ -271,7 +271,7 @@ ul{
     color: var(--color-text);
 }
 .intro-btn:hover a{
-    color: white;
+    color: black;
 }
 
 
@@ -324,6 +324,7 @@ ul{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    transition: all 0.4s ease-in-out;
 }
 .card{
     width: 20%;
@@ -334,6 +335,11 @@ ul{
     border: 2px dotted var(--color-body);
     border-radius: 10px;
     padding-bottom: 3rem;
+    transition: all 0.4s ease-in-out;
+}
+.card:hover{
+    zoom: 1.2;
+    /* font-size: 1rem; */
 }
 .card-para1{
     padding-top: 0.8rem;
@@ -722,7 +728,9 @@ ul{
     background-color: rgba(0, 0, 0, 0.803);
     opacity: 1;
     z-index: 2;
+    /* zoom: 1.2; */
 }
+
 .project-title-onimage{
     color: white;
     font-size: 3rem;
