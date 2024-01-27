@@ -31,6 +31,18 @@ ul{
     text-align: center;
 }
 
+.highlight {
+    /* color: red;
+    font-weight: bold;
+    background: black; */
+
+    border-bottom: 2px solid black;
+}
+.wrong_highlight{
+    color: red;
+    background: black;
+}
+
 
 
 .to-type-div{

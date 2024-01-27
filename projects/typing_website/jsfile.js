@@ -107,8 +107,11 @@ function cheakScore(){
 
 }
 
+// console.log(para_to_type_text);
+
 // keypress is depricated 
 let count = para_to_type_length;
+let i = 1;
 function keydownfunc(e){
     if(count == para_to_type_length)
     {
@@ -131,13 +134,36 @@ function keydownfunc(e){
            what_typed = what_typed.slice(0, -1);
            what_typed_para.innerText = "" + what_typed;
            count++;
+
+           i--;
+
+           var highlightedText = para_to_type.textContent.substring(0, i-1) +
+            '<span class="highlight">' + para_to_type.textContent.charAt(i-1) + '</span>' +
+            para_to_type.textContent.substring(i);
+
+            // Update the content of the paragraph
+            para_to_type.innerHTML = highlightedText;
+
         }
         else
         {
+            
+            
+                var highlightedText = para_to_type.textContent.substring(0, i) +
+                '<span class="highlight">' + para_to_type.textContent.charAt(i) + '</span>' +
+                para_to_type.textContent.substring(i + 1);
+    
+                // Update the content of the paragraph
+                para_to_type.innerHTML = highlightedText;
+
+
+
             what_typed = what_typed + e.key;
             what_typed_para.innerText = "" + what_typed;
             // console.log("inside keydownfunc");
             count--;
+
+            i++;
         }
         
         
