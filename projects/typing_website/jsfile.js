@@ -129,7 +129,7 @@ function keydownfunc(e){
     }
     if(/^[a-zA-Z0-9 (),.'"]$/.test(e.key) || e.key === "Backspace")
     {
-        if(e.key === "Backspace")
+        if(e.key === "Backspace" && i != 0)
         {
            what_typed = what_typed.slice(0, -1);
            what_typed_para.innerText = "" + what_typed;
