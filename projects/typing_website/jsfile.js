@@ -129,15 +129,24 @@ function keydownfunc(e){
     }
     if(/^[a-zA-Z0-9 (),.'"]$/.test(e.key) || e.key === "Backspace")
     {
-        if(e.key === "Backspace" && i != 0)
+        
+        if(e.key === "Backspace")
         {
-           what_typed = what_typed.slice(0, -1);
-           what_typed_para.innerText = "" + what_typed;
-           count++;
 
-           i--;
+            if(i == 1)
+            {
+                i = i;
+            }
+            else
+            {
+                what_typed = what_typed.slice(0, -1);
+                what_typed_para.innerText = "" + what_typed;
+                count++;
+    
+                i--;
+            }
 
-           var highlightedText = para_to_type.textContent.substring(0, i-1) +
+            var highlightedText = para_to_type.textContent.substring(0, i-1) +
             '<span class="highlight">' + para_to_type.textContent.charAt(i-1) + '</span>' +
             para_to_type.textContent.substring(i);
 
