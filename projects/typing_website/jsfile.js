@@ -44,7 +44,7 @@ function calculateAccuracy()
     }
 
     // console.log(para_to_type_array);
-    // console.log(what_typed_para_array);
+    console.log(what_typed_para.textContent);
 
     return error;
 }
@@ -94,7 +94,7 @@ function cheakScore(){
 
     let total_time_in_min = ((endTime - startTime)/(1000*60));
     
-    console.log(total_time_in_min);
+    // console.log(total_time_in_min);
 
 
 
@@ -112,6 +112,7 @@ function cheakScore(){
 // keypress is depricated 
 let count = para_to_type_length;
 let i = 1;
+let curr_char = 0;
 function keydownfunc(e){
     if(count == para_to_type_length)
     {
@@ -130,6 +131,9 @@ function keydownfunc(e){
     if(/^[a-zA-Z0-9 (),.'"]$/.test(e.key) || e.key === "Backspace")
     {
         
+        
+
+
         if(e.key === "Backspace")
         {
 
@@ -157,6 +161,18 @@ function keydownfunc(e){
         else
         {
             
+            // this is for incorrect characters highlighting
+            // if(e.key != para_to_type_text[curr_char])
+            // {
+            //     console.log(e.key);
+            //     console.log(para_to_type_text[curr_char]);
+            //     var highlightedText = para_to_type.textContent.substring(0, i-1) +
+            //     '<span class="wrong">' + para_to_type.textContent.charAt(i-1) + '</span>' +
+            //     para_to_type.textContent.substring(i);
+            //     para_to_type.innerHTML = highlightedText;
+            //     console.log(highlightedText);
+            // }
+            // curr_char++;
             
                 var highlightedText = para_to_type.textContent.substring(0, i) +
                 '<span class="highlight">' + para_to_type.textContent.charAt(i) + '</span>' +
@@ -181,7 +197,9 @@ function keydownfunc(e){
 }
 
 
-    document.addEventListener("keydown", keydownfunc);
+
+document.addEventListener("keydown", keydownfunc);
+
    
 
 

@@ -335,10 +335,12 @@ ul{
     border: 2px dotted var(--color-body);
     border-radius: 10px;
     padding-bottom: 3rem;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .card:hover{
-    zoom: 1.2;
+    /* zoom: 1.2; */
+    height: 50%;
+    width: 50%;
     /* font-size: 1rem; */
 }
 .card-para1{
@@ -430,7 +432,7 @@ ul{
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     margin: 0.5rem;
-    
+    border-radius: 25px;
 }
 /* .education-title-btn:hover{
     background: rgb(156, 93, 215);
@@ -505,7 +507,12 @@ ul{
     padding: 3rem;
     color: var(--color-text);
     border-radius: 20px;
+    /* transition: all 0.3s ease-in-out; */
 }
+/* .experience:hover{
+    height: 27rem;
+    width: 102%;
+} */
 .experience .experience-para{
     font-size: 2.5rem;
     font-weight: 500;
@@ -680,7 +687,7 @@ ul{
     font-weight: 500;
     cursor: pointer;
     background: red;
-    color: var(--color-body);
+    color: black;
     outline: none;
     border: none;
     transition: all 0.3s ease-in-out;
@@ -986,7 +993,9 @@ ul{
     }
     .experience{
         height: 30rem;
+
     }
+    
     .circle{
         transform: translate(35%, 0);
     }

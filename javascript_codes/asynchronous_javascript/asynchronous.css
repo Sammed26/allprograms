@@ -1,0 +1,8 @@
+.heading{
+    display: none;
+    background: red;
+    transition: all 2s ease-in;
+}
+.btn{
+    transition: all 2s ease-in;
+}
