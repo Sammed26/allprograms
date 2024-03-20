@@ -247,3 +247,9 @@ console.log(window.location);
 
 
 
+
+// ========================= project section slider code ===================
+
+
+
+
