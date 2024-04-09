@@ -1,68 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.2em;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(245, 239, 227);
+  letter-spacing: 0.2em;
+
 }
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
+.container {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
 
+  
 
-
-
-.container{
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-
-
-
-
-
-
-
-/* ======================= form styling ======================= */
-
-.input-section{
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-}
-#array{
-    width: 50%;
-    height: 20px;
-}
-#v-btn{
-    width: 20%;
-    height: 20px;
 }
 
 
 
 
 
-/* ================== visualization div styling ====================== */
 
-.visualization-div{
-    position: relative;
+
+
+
+
+
+
+
+.input-section {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+#array {
+    width: 40%;
+    height: 30px;
+    border: 3px solid black;  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-right: 2%;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.input-form span{
+    width: 30%;
+    text-align: right;
     
 }
-.visualization-div div{
-    transition: all 1s ease-in-out;
-    border: 2px solid black;
-    display: inline-block;
-    margin: 10px;
-    position: absolute;
+
+.input-form button {
+  width: 10%;
+  height: 30px;
+  margin-top: 10px;
+
+  background-color: black;
+  color: white;
+    border-radius: 10px;
 
 }
+.input-form button:hover{
+
+    background-color: aqua;
+    color: black;
+}
+
+.visualization-div {
+  position: relative;
+}
+
+.visualization-div div {
+  transition: all 1s ease-in-out;
+  border: 2px solid black;
+  display: inline-block;
+  margin: 10px;
+  position: absolute;
+}
+
+/* Remove specificity from .array-element.swapping */
+.highlight-bar {
+  background-color: #4caf50; /* Green color */
+}
+
+.sorted-highlight {
+  background-color: yellow;
+}
+
+
+
+
+
+
+
+.heading{
+    font-size: 3.2rem;
+    text-align: center;
+
+}
+
+.input-form label{
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+}
+
+#algorithm{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+/* =============================== description box styling ========================= */
+
+.real-time-description-section{
+    position: absolute;
+    border: 2px dotted black;
+    width: 20%;
+    height: 50%;
+    padding: 1.5rem;
+    left: 75%;
+}
+
+.real-time-description-section p{
+    
+    font-size: 1.8rem;
+    
+
+}
+
+
+
