@@ -232,6 +232,11 @@ html {
       font-size: 8px;
     }
 
+    .pause
+    {
+      display: none;
+    }
+
     .input-form{
       text-align: center;
     }
@@ -281,6 +286,10 @@ html {
       font-size: 8px;
     }
 
+    .pause
+    {
+      display: none;
+    }
     .input-form{
       text-align: center;
     }
@@ -336,6 +345,11 @@ html {
     font-size: 8px;
   }
 
+
+  .pause
+    {
+      display: none;
+    }
   .input-form{
     text-align: center;
   }

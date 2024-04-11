@@ -7,7 +7,7 @@ submit_array.addEventListener("click", ()=>
 { 
     if(submit_array_pressed_times == 0)
     {
-        alert("Press once again");
+        alert("Confirm once again");
         submit_array_pressed_times++;
     }
     
