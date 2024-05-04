@@ -57,3 +57,28 @@ xhr.onerror = function(){
 
 xhr.send();
 
+
+
+
+
+
+
+
+
+
+// const data = null;
+
+// const xhr = new XMLHttpRequest();
+// xhr.withCredentials = true;
+
+// xhr.addEventListener('readystatechange', function () {
+// 	if (this.readyState === this.DONE) {
+// 		console.log(this.responseText);
+// 	}
+// });
+
+// xhr.open('GET', 'https://real-time-amazon-data.p.rapidapi.com/product-reviews?asin=B07ZPKN6YR&country=US&verified_purchases_only=false&images_or_videos_only=false&current_format_only=false&page=1');
+// xhr.setRequestHeader('X-RapidAPI-Key', '6467a0047amshf98d4f994c2704fp11c3c8jsn2e5d06c4a824');
+// xhr.setRequestHeader('X-RapidAPI-Host', 'real-time-amazon-data.p.rapidapi.com');
+
+// xhr.send(data);
