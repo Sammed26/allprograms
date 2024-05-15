@@ -9,7 +9,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.2em;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("{{ url_for('static', filename='images/background.jpg') }}");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('./images/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,16 +70,18 @@ html{
 .review-btn{
     position: absolute;
     display: inline-block;
-    bottom: 30%;
+    bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 4rem;
+    height: 2.5rem;
     width: 30%;
     background: black;
     color: white;
-    border-radius: 3rem;
+    border-radius: 1.5rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    top: 55%;
+    font-size: 12px;
 }
 .review-btn:hover{
     background-color: white;
@@ -107,3 +109,12 @@ html{
 
 
 
+#tarea{
+ position: absolute;
+ top:80%;
+ transform:scale(3, 3);
+ left:38%;
+ font-size: 5px;
+ width: 30%;
+ height: 10%;
+}
