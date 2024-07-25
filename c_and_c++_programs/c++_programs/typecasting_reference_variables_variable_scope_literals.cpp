@@ -22,8 +22,9 @@ int main()
     cout<<a<<endl;
     cout<<b<<endl;
     cout<<c<<endl;
-
-    cout<<"size of 'float a = 4' is "<<sifzeo(a)<<endl;
+    cout<<d<<endl;
+    
+    cout<<"size of 'float a = 4' is "<<sizeof(a)<<endl;
     cout<<"size of 'float b = 32.62f' is "<<sizeof(b)<<endl;
     cout<<"size of 'long double c = 23.98l' is "<<sizeof(c)<<endl;
     cout<<"size of 'long double d = 23.98' is "<<sizeof(d)<<endl;  
@@ -33,7 +34,7 @@ int main()
     int m = 2;
     float s = 2.5;
 
-    cout<<"the m after typecasting from int to float is "<<float(m)<<endl;
+    cout<<"the m after typecasting from int to float is "<<sizeof(double(m))<<endl;
     cout<<"the m after typecasting from int to float is "<<(float)m<<endl;
     cout<<"the s after typecasting from float to int is "<<int(s)<<endl;
     cout<<"the s after typecasting from float to int is "<<(int)s<<endl;
