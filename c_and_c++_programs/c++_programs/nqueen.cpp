@@ -1,86 +1,108 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-bool cheakavaliability(int placei[], int placej[], int qu, int ithindex, int jthindex)
+int number_of_solutions = 0;
+
+void print(vector<vector<bool>> &board, int n)
 {
-    int counter = 0;
-    for(int i = 0; i<qu; i++)
+    number_of_solutions++;
+    cout<<"printing possible solution"<<endl;
+    for(int i = 0; i<n; i++)
     {
-        if((placei[i] != ithindex) && (placej[i] != ithindex) && (placei[i] != jthindex) && (placej[i] != jthindex) && ((placei[i] + placej[i]) != (ithindex + jthindex)))
+        for(int j = 0; j<n; j++)
         {
-            counter++;
-        }
-    }
-    if(counter == ithindex)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-void nqueen(int q)
-{
-    cout<<"entered"<<endl;
-    int spaces[q][q];
-    for(int i = 0; i<q; i++)
-    {
-        for(int j = 0; j<q; j++)
-        {
-            spaces[i][j] = 0;
-        }
-    }
-    int backtrackcount = 0;
-    int notfound = 1;
-    spaces[0][0] = 1;     // i is for row and j is for column
-
-    int placedi[q], placedj[q];   // this is storing the placed queens index
-    for(int i = 0 ; i<q; i++)
-    {
-        placedi[i] = -1;
-        placedj[i] = -1;
-    }
-    placedi[0] = 0;
-    placedj[0] = 0;
-    int spacenotfound = 0;
-    for(int i = 1; i<q; i++)
-    {
-        spacenotfound = 0;
-        for(int j = 0; j<q; j++)
-        {
-            bool status = cheakavaliability(placedi, placedj, q, i, j);
-            if(status)
-            {
-                spaces[i][j] = 1;
-                placedi[i] = i;
-                placedj[j] = j;
-                spacenotfound++;
-                break;
-            }
-        }
-        if(spacenotfound == 0)
-        {
-            i = i-1;
-        }
-    }
-
-    cout<<"printing final solution"<<endl;
-    for(int k = 0; k<q; k++)
-    {
-        for(int s = 0; s < q; s++)
-        {
-            cout<<spaces[k][s]<<" ";
+            cout<<board[i][j]<<" ";
         }
         cout<<endl;
     }
+    cout<<endl;
 }
 
- 
+bool safe(vector<vector<bool>> &board, int n, int col, int row)
+{
+    int colx = col;
+    int rowx = row;
+    while(colx >= 0)
+    {
+        if(board[rowx][colx] == 1)
+        {
+            return 0;
+        }
+        colx--;
+    }
+
+    // cheak for leftward, top locations
+    colx = col;
+    rowx = row;
+    while(colx >= 0 && rowx >= 0)
+    {
+        if(board[rowx][colx] == 1)
+        {
+            return 0;
+        }
+        rowx--;
+        colx--;
+    }
+
+    // cheak for leftward, bottom locations
+    colx = col;
+    rowx = row;
+    while(colx >= 0 && rowx < n)
+    {
+        if(board[rowx][colx] == 1)
+        {
+            return 0;
+        }
+        rowx++;
+        colx--;
+    }
+
+    return 1;
+}
+
+void queen(vector<vector<bool>> &board, int n, int col)
+{
+    // base case
+    if(col == n)
+    {
+        // cout<<"entered into base case"<<endl;
+        print(board, n);
+        return ;
+    }
+
+    for(int row = 0; row < n; row++)
+    {
+        if(safe(board, n, col, row))
+        {
+            board[row][col] = 1;
+            queen(board, n, col+1);
+            board[row][col] = 0;
+        }
+    }
+}
+
+
+
 int main()
 {
-    nqueen(4);
+    int n;
+    cout<<"enter n value of your board n*n"<<endl;
+    cin>>n;
+
+    vector<vector<bool>> board;
+
+    vector<bool> temp(n, 0);
+    for(int i = 0; i<n; i++)
+    {
+        board.push_back(temp);
+    }
+
+    int col = 0;
+    queen(board, n, col);
+
+
+    cout<<"possible solutions = "<<number_of_solutions<<endl;
 
     return 0;
 }

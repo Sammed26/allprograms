@@ -13,9 +13,7 @@ class bank
 
      public:
        // bank(){}
-                 /* this default constructor is needed because when we create object
-                    it tries to run some constructor till we give any specific type 
-                    constructor as an input.
+                 /* this non parameterized constructor is needed because when we create object it tries to run some constructor till we give any specific type constructor as an input.
                    
                     If you not want to create default constructor then you need to 
                     give values(parameters) while creating an object itself,

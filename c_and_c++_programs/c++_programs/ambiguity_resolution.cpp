@@ -6,7 +6,7 @@ class first
     public:
         void message()
         {
-            cout<<"what are you doing?"<<endl;
+            cout<<"what are you doing? from class first"<<endl;
         }
 };
 
@@ -15,7 +15,7 @@ class second
     public:
         void message()
         {
-            cout<<"How are you?"<<endl;
+            cout<<"How are you? from class second"<<endl;
         }
 };
 
