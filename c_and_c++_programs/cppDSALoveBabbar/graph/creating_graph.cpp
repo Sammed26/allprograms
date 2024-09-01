@@ -1,6 +1,8 @@
 #include <iostream>
 #include <list>
 #include <unordered_map>
+#include <queue>
+#include <vector>
 
 using namespace std;
 
@@ -39,6 +41,16 @@ class graph
             cout<<endl;
         }
     }
+
+    // void print_bfs_of_graph()
+    // {
+    //     queue<int> bfs_queue;
+    //     vector<int> bfs_traversal;
+    //     unordered_map<int, bool> visited;
+
+    //     for(int i= 0; i<)
+
+    // }
 
 };
 
