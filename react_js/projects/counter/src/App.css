@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+.incre-para{
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.decre-para{
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+button{
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+  background: white;
+  color: black;
+}
