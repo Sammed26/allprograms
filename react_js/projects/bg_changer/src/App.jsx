@@ -23,19 +23,24 @@ function App() {
   return (
     <>
       <div className='box' style={{backgroundColor: `rgb(${r}, ${g}, ${b})`, padding: "8rem" }}>
+        
         <h1 style={{ color: `rgb(${256-r}, ${256-g}, ${256-b})`}}>
           Background Changer
         </h1>
 
-        <p  style={{ color: `rgb(${256-r}, ${256-g}, ${256-b})`}}>
+
+        
+      </div>
+
+      <br />
+      <br />
+        <p  style={{ color: "white"}}>
           'rgb = {r}, {g}, {b}'
         </p>
 
         <button onClick={change_color}>
           click to change color
         </button>
-        
-      </div>
 
     </>
   )

@@ -1,0 +1,43 @@
+
+#root{
+  text-align: center;
+  font-size: 20px;
+}
+
+.main-div{
+  margin-left: 5vw;
+  width: 90vw;
+  height: 50vh;
+  text-align: center;
+  background-color: rgb(234, 246, 246);
+  color: black;
+}
+.pass-text{
+  width: 60%;
+  height: 30%;
+  color: black;
+  background-color: white;
+}
+.password-area-and-copy-btn button{
+  margin: 1.5rem;
+  width: 10%;
+}
+input[type='checkbox']{
+  align-items: center;
+  margin-top: 1rem;
+  zoom: 2.5;
+}
+input[type='text']{
+  padding-left: 1rem;
+  height: 3rem;
+}
+input{
+  font-size: 1.5rem;
+}
+label{
+  font-size: 2rem;
+  margin: auto 0;
+}
+input[type='range']{
+  zoom: 2;
+}
