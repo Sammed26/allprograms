@@ -1,0 +1,21 @@
+.asset-div{
+    border: 2px solid black;
+    height: 40vh;
+    border-radius: 3rem;
+}
+
+.asset_heading{
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: white;
+    background-color: black;
+    height: 5rem;
+    border-radius: 3rem;
+}
+
+.asset_desc{
+    padding-top: 4rem;
+    font-size: 1.8rem;
+
+}
