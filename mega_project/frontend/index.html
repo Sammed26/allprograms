@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crowd Management Dashboard</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <header>
+    Crowd Management System Dashboard
+  </header>
+
+  <main>
+    <!-- Real-Time Crowd Density Card -->
+    <div class="card">
+      <h3>Real-Time Crowd Density</h3>
+      <div class="content">
+        <div class="chart" id="densityChart"></div>
+        <p>Current Density: <span id="currentDensity">Loading...</span> people/m²</p>
+      </div>
+    </div>
+
+    <!-- Alerts Card -->
+    <div class="card">
+      <h3>Alerts</h3>
+      <div class="content">
+        <div id="alertBox" class="alert">No Alerts</div>
+      </div>
+    </div>
+
+    <!-- Historical Data Card -->
+    <div class="card">
+      <h3>Historical Data</h3>
+      <div class="content">
+        <p>Recent Events:</p>
+        <ul id="historyList">
+          <li>Loading...</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2024 Crowd Management System.
+  </footer>
+
+  
+</body>
+</html>
