@@ -9,7 +9,7 @@
       document.getElementById('currentDensity').innerText = density;
 
       // Update alert box based on density
-      if (density > 8) {
+      if (density > 6) {
         alertBox.innerText = "High Crowd Density Detected!";
         alertBox.className = "alert";
       } else {
