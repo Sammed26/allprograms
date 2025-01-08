@@ -150,6 +150,7 @@ ul{
 .footer-para{
     padding: 2rem;
     margin-top: 3rem;
+    padding-top: 5rem;
     font-size: 1.4rem;
 }
 
@@ -209,10 +210,10 @@ ul{
     }
 }
 .first-intro{
-    /* background: linear-gradient(rgba(0,0,0, 0.45), rgba(0,0,0, 0.45)); */
+    background: linear-gradient(rgba(0,0,0, 0.45), rgba(0,0,0, 0.45));
     box-shadow: 5px 5px 5px 7px rgba(0, 0, 0, 0.232);
     border-radius: 20px;
-    width: 80%;
+    width: 45%;
     padding: 1rem 1rem 1rem 5rem;
     /* background-color: white; */
     /* border: 2px solid white; */
@@ -267,7 +268,7 @@ ul{
     border-radius: 5px;
 }
 .intro-btn:hover{
-    background: var(--color-body);
+    background: black;
     color: var(--color-text);
 }
 /* .intro-btn:hover a{
@@ -810,6 +811,108 @@ ul{
 .contact-links{
     color: var(--color-text);
 }
+
+
+
+/* ========================= feedback section styling ====================== */
+.Feedback-content{
+    padding-left: 5rem;
+    margin: 15rem 0 2rem 0;
+    padding-top: 5rem;
+
+}
+.Feedback-content h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6rem;
+    padding-bottom: 4rem;
+}
+
+.feedback{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+}
+.feedback .feedback-desc{
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+}
+.feedback .feedback-form{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid var(--color-text);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.feedback input,
+.feedback textarea{
+    border-radius: 1rem;
+    background: rgb(233, 233, 232);
+}
+.feedback #name,
+.feedback #email{
+    width: 50%;
+    height: 3rem;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+}
+.feedback #response{
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    width: 60%;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+.feedback #submit{
+    border: ;
+    width: 25%;
+    height: 3.8rem;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-radius: 10rem;
+    transition: all 0.3s ease-in-out;
+    
+}
+#submit:hover{
+    background-color: red;
+    color: var(--color-text);
+    
+}
+
+.feedback label{
+    font-size: 1.9rem;
+}
+
+/* ============ form response styling ======== */
+.pop-up-after-successful-form,
+.pop-up-after-unsuccessful-form{
+    background-color: var(--color-text);
+    text-align: center;
+    font-size: 3rem;
+    position: fixed;
+    top: 30%;
+    color: var(--color-body);
+    width: 50vw;
+    height: 50vh;
+    padding: 2rem;
+    border-radius: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.successful-close-btn,
+.unsuccessful-close-btn{
+    width: 20%;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: var(--color-body);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
 
 
 

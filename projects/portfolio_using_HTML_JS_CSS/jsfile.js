@@ -253,3 +253,76 @@ console.log(window.location);
 
 
 
+
+
+// ====================== backend requrest sending for feedback received ==============
+
+const successful_message = document.querySelector(".pop-up-after-successful-form");
+const unsuccessful_message = document.querySelector(".pop-up-after-unsuccessful-form");
+
+if (successful_message) {
+    successful_message.style.display = "none";
+}
+
+if (unsuccessful_message) {
+    unsuccessful_message.style.display = "none";
+}
+
+document.querySelector(".pop-up-after-unsuccessful-form").addEventListener("click", ()=>{
+    successful_message.style.display = "none";
+    unsuccessful_message.style.display = "none";
+    document.querySelector(".feedback-form").reset();
+});
+
+document.querySelector(".pop-up-after-successful-form").addEventListener("click", ()=>{
+    successful_message.style.display = "none";
+    unsuccessful_message.style.display = "none";
+    document.querySelector(".feedback-form").reset();
+})
+
+document.querySelector(".feedback-form").addEventListener('submit', async (e)=>{
+    e.preventDefault();
+
+    // const Name = document.getElementById("name").value;
+    // const email = document.getElementById("email").value;
+    // const response = document.getElementById("response").value;
+    
+    // console.log(Name);
+    // console.log(email);
+    // console.log(response);
+
+    const data = {
+        "name": document.getElementById("name").value,
+        "email": document.getElementById("email").value,
+        "response": document.getElementById("response").value
+    }
+
+    try{
+        const response = await fetch('http://localhost:3000/add', {
+            method: "POST",
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const message = await response.text();
+        if(message === "1")
+        {
+            successful_message.style.display = "block";
+        }
+
+        // document.querySelector(".feedback-form").reset();
+    }
+    catch(error)
+    {
+        unsuccessful_message.style.display = "block";
+        console.error("Error:", error);
+        alert(error);
+    }
+
+})
+
+
+
+
