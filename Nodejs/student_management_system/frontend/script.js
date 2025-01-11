@@ -23,6 +23,44 @@ edit_button.addEventListener('click', ()=>{
 
 })
 
+document.getElementById('edit').addEventListener('submit', async (event)=>{
+    event.preventDefault();
+
+    const rollno = document.getElementById('old-rollno').value;
+
+    try{
+        const newdata = {
+            "name": document.getElementById("new-name").value,
+            "rollno": document.getElementById("new-rollno").value,
+            "grade": document.getElementById("new-grade").value
+        }
+        const response = await fetch(`http://localhost:3000/edit/${rollno}`,{
+                method:"PUT",
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newdata)
+        });
+
+        if(!response.ok)
+        {
+            console.log("record not found");
+            alert("record not found");
+        }
+        else
+        {
+            console.log("record updated successfully");
+            alert("record updated successfully");
+        }
+
+    }
+    catch(error)
+    {
+        alert("Internal Server Error : ", error.message);
+    }
+
+})
+
 
 
 
@@ -54,18 +92,14 @@ document.getElementById("delete").addEventListener('submit', async (event)=>{
 
     event.preventDefault();
 
-    const data_to_delete = {
-        rollno: parseInt(document.getElementById("delete-rollno").value, 10)
-    };
+    
+    const rollno = parseInt(document.getElementById("delete-rollno").value, 10)
+    
     
 
     try{
-        const response = await fetch('http://localhost:3000/delete', {
-            method: "POST",
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data_to_delete)
+        const response = await fetch(`http://localhost:3000/delete/${rollno}`, {
+            method: "DELETE"
         });
 
         const message = await response.text();
@@ -112,3 +146,4 @@ document.getElementById("add").addEventListener('submit', async (event)=>{
     }
 
 })
+

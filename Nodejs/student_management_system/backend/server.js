@@ -47,59 +47,38 @@ app.post('/add', async (req, res)=>{
 
 })
 
-app.post('/delete', async (req, res)=>{
-
-    try{
-        const data = req.body;
-
-        const result = db.collection("newstudents").deleteOne(data);
-
-        if (result.deletedCount === 1) {
-            res.status(200).send("Deletion successful");
-        } else {
-            res.status(404).send("No matching document found");
-        }
-        
-        res.status(200).send("deletion successful");
+app.delete('/delete/:rollno', async (req, res) => {
+    const rollno = req.params.rollno;
+  
+    if (!rollno) {
+      return res.status(400).send("Roll number is required");
     }
-    catch(error){
-        res.status(500).send("Internal Server Error: ", error);
+  
+    try {
+      const result = await Student.deleteOne({ rollno: rollno });
+  
+      if (result.deletedCount === 1) {
+        return res.status(200).send("Deletion successful");
+      } else {
+        return res.status(404).send("No matching document found");
+      }
+    } catch (error) {
+      res.status(500).send(`Internal Server Error: ${error.message}`);
     }
-
-})
-
-// app.post('/delete', async (req, res) => {
-//     try {
-//         const { rollno } = req.body; // Destructure rollno from req.body
-
-//         if (!rollno) {
-//             return res.status(400).send("Invalid request: Missing rollno");
-//         }
-
-//         const result = await db.collection("newstudents").deleteOne({ rollno });
-
-//         if (result.deletedCount === 1) {
-//             res.status(200).send("Deletion successful");
-//         } else {
-//             res.status(404).send("No matching document found");
-//         }
-//     } catch (error) {
-//         console.error("Error deleting document:", error);
-//         res.status(500).send(`Internal Server Error: ${error.message}`);
-//     }
-// });
+  });
+  
 
 
-app.post('/edit', async (req, res)=>{
+app.put('/edit/:rollno', async (req, res)=>{
     try{
         const data = req.body;
 
         const newdata = {$set : {name:data.name, rollno: data.rollno, grade: data.grade}};
 
-        const result = db.collection("newstudents").updateOne(data, newdata);
+        const result = await Student.updateOne({rollno: req.params.rollno}, newdata);
 
 
-        if((await result).matchedCount === 0)
+        if(result.matchedCount === 0)
         {
             console.log("No matching data found");
             res.status(404).send("No matchind data found: ");
@@ -113,7 +92,7 @@ app.post('/edit', async (req, res)=>{
     }
     catch(error){
         console.log("Failed to update data");
-        res.status(500).send("Internal Server Error: "+error.message);
+        res.status(500).send(`Internal Server Error: ${error.message}`);
     }
 })
 

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 const personSchema = require('../models/personSchema');
-const person = require('../models/personSchema');
+
 
 router.use(express.json()); 
 router.use(express.urlencoded({ extended: true }));

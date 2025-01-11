@@ -280,25 +280,27 @@ document.querySelector(".pop-up-after-successful-form").addEventListener("click"
     document.querySelector(".feedback-form").reset();
 })
 
+const submitbtn = document.getElementById("submit");
+const main_content = document.querySelector(".main-content");
+const loader = document.querySelector(".loader-temp-class");
+
+
 document.querySelector(".feedback-form").addEventListener('submit', async (e)=>{
     e.preventDefault();
-
-    // const Name = document.getElementById("name").value;
-    // const email = document.getElementById("email").value;
-    // const response = document.getElementById("response").value;
     
-    // console.log(Name);
-    // console.log(email);
-    // console.log(response);
-
+    submitbtn.style.display = "none";
+    loader.classList.add("loader");
+    main_content.style.opacity = "0.1";
+    
+    
     const data = {
         "name": document.getElementById("name").value,
         "email": document.getElementById("email").value,
         "response": document.getElementById("response").value
     }
-
+    
     try{
-        const response = await fetch('http://localhost:3000/add', {
+        const response = await fetch('https://sammed-portfolio.onrender.com/add', {
             method: "POST",
             headers:{
                 'Content-Type': 'application/json'
@@ -308,18 +310,22 @@ document.querySelector(".feedback-form").addEventListener('submit', async (e)=>{
 
         const message = await response.text();
         if(message === "1")
-        {
-            successful_message.style.display = "block";
+            {
+                successful_message.style.display = "block";
+            }
+            
         }
-
-        // document.querySelector(".feedback-form").reset();
-    }
-    catch(error)
-    {
-        unsuccessful_message.style.display = "block";
-        console.error("Error:", error);
-        alert(error);
-    }
+        catch(error)
+        {        
+            unsuccessful_message.style.display = "block";
+            console.error("Error:", error);
+            alert(error);
+        }
+        
+    document.querySelector(".feedback-form").reset();
+    loader.classList.remove("loader");
+    main_content.style.opacity = "1";
+    submitbtn.style.display = "inline-block";
 
 })
 
