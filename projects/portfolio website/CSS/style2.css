@@ -1,0 +1,141 @@
+body{
+    font-family: sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)) ,url('../Images/markus-spiske-Skf7HxARcoc-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* ========================= heading styling ======================== */
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+.name h1{
+    font-size: 3rem;
+    padding: 2rem;
+}
+.navbar ul li{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+ .whole-page{
+    height: 100vh;
+    color: white;
+}
+
+.photo-name{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5rem;
+}
+.photo{
+    text-align: center;
+    width: 40%;
+}
+.description-section{
+    text-align: center;
+    width: 60%;
+    color: white;
+}
+.photo img{
+    width: 20rem;
+    height: 25rem;
+}
+
+
+.about{
+    padding: 3rem;
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    background-color: white;
+    height: 30vh;
+    color: black;
+    text-align: center;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+}
+.info,
+.details{
+    width: 50%;
+    font-size: 1.5rem;
+}
+    
+.info{
+    text-align: left;
+}
+.details{
+    padding: 4rem 0 0 8rem;
+    padding: top right bottom left;
+}
+
+.info h2{
+    border-bottom: 3px solid black;
+    padding-bottom: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+
+
+
+
+/* ================================ about section styling =================================== */
+.about-info{
+    border: 3px solid white;
+    width: 70vw;
+    margin-left: 15vw;
+    text-align: center;
+    line-height: 2.5rem;
+    background-color: rgb(158, 163, 163);
+    margin-top: 20vh;
+}
+.about-page-heading h1{
+    font-size: 2.8rem;
+}
+.about-para p{
+    font-size: 2rem;
+}
+
+
+
+/* ================================== footer styling ============================== */
+
+.footer{
+    position: absolute;
+    height: 10vh;
+    bottom: 0%;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 1.5rem;
+}
+

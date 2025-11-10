@@ -8,6 +8,7 @@ abstract class AbstractBase
 
 class Derived extends AbstractBase
 {
+    @Override
     public void print()
     {
         System.out.println("print method in derived class from abstract class is called");

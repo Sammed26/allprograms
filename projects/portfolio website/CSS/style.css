@@ -25,7 +25,6 @@ a{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 /* ============= utility classes ============= */
@@ -296,7 +295,7 @@ a{
     background: white;
     outline: none;
     color: black;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 .contact-info{
     text-align: center;
@@ -371,6 +370,13 @@ a{
 
 
 /* ===================== resume page styling ====================== */
+.whole-page-resume{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('../Images/markus-spiske-Skf7HxARcoc-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
 .resume-info{
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.235)) ,url('../Images/resume_background.jpg');
@@ -398,6 +404,17 @@ a{
     color: black;
     transition: all 0.3s ease-in-out;
 
+}
+.footer-resume{
+    position: absolute;
+    height: 7rem;
+    width: 100vw;
+    background: black;
+    bottom: 0%; 
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 2rem;
 }
 
 
