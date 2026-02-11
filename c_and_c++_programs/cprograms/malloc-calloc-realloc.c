@@ -43,10 +43,10 @@ int main()
     printf("enter the new size\n");
     scanf("%d", &n);
 
-    printf("enter values\n");
     c = (int*)realloc(p, n*sizeof(int));
-
-
+    
+    
+    printf("enter values\n");
     for(i=0; i<n; i++)
     {
         scanf("%d", &p[i]);
@@ -55,6 +55,8 @@ int main()
     {
         printf("the value at %d index is %d\n",i,p[i]);
     }
+
+    free(c);
 
 return 0;
 }

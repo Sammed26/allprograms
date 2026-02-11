@@ -3,6 +3,11 @@ using namespace std;
 
 int main()
 {
+    char ch = 's';
+    int roll1 = 1;
+    int roll2 = 3;
+    cout<<roll1;
+    cout<<ch<<endl;
     char array[] = {'c', 'd', 'm', 's'};
     /*cout<<array[0]<<endl;
     cout<<array[1]<<endl;
@@ -11,8 +16,8 @@ int main()
     */
     char *ptr;
     ptr = array;
-    cout<<"array[0] is "<<*ptr<<endl;
-    ptr++;
+    cout<<"array[0] is "<<array[0]<<endl;
+    ptr = ptr + 1;
     cout<<"array[1] is "<<*ptr<<endl;
     ptr++;
     cout<<"array[2] is "<<*ptr<<endl;
