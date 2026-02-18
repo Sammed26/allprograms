@@ -95,6 +95,7 @@ int main()
     
     while(1)
     {
+        printf("enter choice of operation you want to perform");
         cout<<"enter choice of operation you want to perform"<<endl;
         cout<<"sum = 1"<<endl<<"subtraction = 2"<<endl<<"multiplication = 3"<<endl<<"division = 4"<<endl;
         cout<<"percentage = 5"<<endl<<"square = 6"<<endl<<"square root = 7"<<endl<<"angle = 8"<<endl;

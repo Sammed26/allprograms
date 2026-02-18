@@ -1,21 +1,23 @@
 #include<iostream>
 
 using namespace std;
-int global = 2;
+
+int globalvar = 2;
+
 void display()
 {
-    cout<<"\nthe global variable is "<<global;
+    cout<<"\nthe global variable is "<<globalvar;
 }
 int main()
 {
     int a = 34, b = 43;
     char s = 'j';
-    int global = 123;
+    int globalvar = 123;
     cout<<"the value of a is "<<a<<"\nthe value of b is "<<b; 
     cout<<"\nthe value of b is "<<b;
     cout<<"\nthe value of s character is "<<s;
     display();
-    cout<<"\nthe value of global in main is "<<global;
+    cout<<"\nthe value of global in main is "<<globalvar;
 
     return 0;
 }
